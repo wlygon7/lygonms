@@ -3,35 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Wilson Ligon</title>
+    <title>Portfolio | JWL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container" id="Intro">
-    <h1 class="title">Hello.</h1>
-    <h3 class="subtitle">My name is Wilson. I am the founder/CEO of Lygon Studios, a bored HS student, and a polymath.</h3>
-    <p class="description">I am active in coding, photography, art/illustration, music, and writing.</p>
+    <!-- Graduation Note - Delete after presentation -->
+    <div class="notice-card">
+        <p>👋 <strong>Hey!</strong> This laptop is a touchscreen - feel free to scroll and explore. Just please scroll back to the top when you're done so others can have the same experience.</p> <p class="links-hint">And all links will be disabled so that we stay on this page, but feel free to check out lygonms.com in a few days for working links. Thanks!</p> <p>I lied...</p>
     </div>
 
-    <div class="container" id="Projects">
-        <h1 class="title">Projects</h1>
-        <div class="project">
-            <h2 class="project-title">Lygon Studios</h2>
-            <p class="project-description">Lygon Studios is a digital development company that I founded in 2025. We have released a few photography works and a book. We have plans to release animations and open source code in the nearby future.</p>
+    <!-- Hero Section -->
+    <div class="container hero">
+        <h1 class="hero-title">Hello.</h1>
+        <h2 class="hero-subtitle">My name is Wilson.</h2>
+        <p class="hero-description">I'm a <span class="highlight">Polymath Technologist</span>, a curious HS student on the edge of graduation, and someone who believes the best learning happens at the intersection of different disciplines.</p>
+        <p class="tagline">Active in: <strong>Coding • Photography • Music • Writing</strong></p>
+    </div>
+
+    <!-- About Section -->
+    <div class="container">
+        <h1 class="section-title">About Me</h1>
+        
+        <div class="about-block">
+            <h2 class="question">Who Am I?</h2>
+            <p class="answer">I'm Wilson - a homeschool student approaching graduation with plans to study IT Networking at ICC. I love being active across my many hobbies, connecting with friends, and exploring new skills. Most importantly, I believe in Jesus Christ as my Lord and Savior, and I love sharing His gospel truth and studying scripture.</p>
         </div>
-        <div class="project">
-            <h2 class="project-title">Photography</h2>
-            <p class="project-description">I have been taking photos for a few years now, being the son of a professional photographer has allowed me to learn from my mother and inherit her nature skills with the lenses, which I've learned to grasp and master</p>
+
+        <div class="about-block">
+            <h2 class="question">What Do I Do?</h2>
+            <p class="answer">I code Web Dev applications, shoot photography and video with my Canon 80D, produce music (bass player + multi-instrumentalist), manage a homelab with Proxmox servers, and write both technical documentation and creative content. I'm always learning new skills and connecting ideas across fields.</p>
+        </div>
+
+        <div class="about-block">
+            <h2 class="question">Why Do I Do It?</h2>
+            <p class="answer">Life is about growth, exploration, and sharing the Gospel of Jesus Christ - our Lord and Savior who died for our sins and rose from the dead three days later. By engaging across diverse activities, I expand my horizons, challenge myself, and find joy in the process of creation. Polymaths don't just know a lot - they see the patterns between disciplines.</p>
+        </div>
+
+        <div class="about-block">
+            <h2 class="question">What's My Faith Background?</h2>
+            <p class="answer">I believe in the Father, Son, and Holy Spirit - that Jesus Christ is our Lord and Savior, fully God and fully man, born of a virgin, who died for our sins and rose from the grave three days later. I attend <a href="rabbit1.html" target="_blank">Cornersville Community Church</a>.</p>
         </div>
     </div>
-       
-        <footer>
-            <p class="footer">© 2024 Wilson Ligon. All rights reserved.</p>
-            <p class="footer">Contact me <a href="mailto:wlygon7@lygonms.com">here</a>
-            <p class="footer"><a href="">Subscribe</a>  to my newsletter for occasional bits of writing. </p>
-        </footer>
+
+    <!-- Projects Section -->
+    <div class="container">
+        <h1 class="section-title">What I Build</h1>
+        
+        <div class="project-card">
+            <h3 class="project-title">Cornersville Community Church Website</h3> <!--TODO: IMPROVE -->
+            <p class="project-description">I, alongside a friend, built the website for Cornersville Community Church.</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">🖥️ Enterprise Homelab</h3>
+            <p class="project-description">Proxmox-based infrastructure running containerized services, monitoring stacks (Prometheus + Grafana), and development environments. My machines are named Vega and Aphrodite - because my servers have personality. VPN solutions, self-hosted services, and continuous learning.</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">🎙️ ANNA Voice Assistant</h3>
+            <p class="project-description">Privacy-focused voice assistant built into repurposed Dell laptop hardware. Local processing, no cloud dependencies. Proving you can build practical AI without sacrificing privacy or turning old hardware into e-waste.</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">📸 Photography</h3>
+            <p class="project-description">Canon 80D-based photography focusing on composition, lighting, and narrative. Learning from my mother (a professional photographer) while developing my own visual voice. Check out my <a href="gallery.html">gallery</a> for some shots I'm proud of. (This link is safe)</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">🎵 Music Production</h3>
+            <p class="project-description">Bass player and multi-instrumentalist. Picked up guitar in 2022, digital production in 2024. Music is another language for systems thinking - patterns, structure, emergence. Listen on <a href="rabbit1.html" target="_blank">SoundCloud</a>.</p>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">✍️ Writing</h3>
+            <p class="project-description">Articles, technical docs, creative content, and theological exploration. Writing forces clarity of thought. Read some of my work on my <a href="rabbit1.html" target="_blank">Digital Garden</a>.</p>
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <div class="container tools-section">
+        <h1 class="section-title">Tools & Stack</h1>
+        <p class="section-intro">Some of the technologies and tools I use regularly:</p>
+        
+        <div class="tools-grid">
+            <div class="tool-category">
+                <h4>Web Development</h4>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>Static Site Generators (Quartz)</li>
+                    <li>Git & GitHub</li>
+                    <li>Custom deployment pipelines</li>
+                </ul>
+            </div>
+            
+            <div class="tool-category">
+                <h4>Systems & Infrastructure</h4>
+                <ul>
+                    <li>Proxmox virtualization</li>
+                    <li>Docker & containers</li>
+                    <li>Prometheus & Grafana</li>
+                    <li>VPN solutions (Netbird, Twingate)</li>
+                </ul>
+            </div>
+            
+            <div class="tool-category">
+                <h4>Audio Production</h4>
+                <ul>
+                    <li>GarageBand / Logic Studio</li>
+                    <li>Audacity</li>
+                    <li>Multi-track recording</li>
+                    <li>Mixing & mastering</li>
+                </ul>
+            </div>
+            
+            <div class="tool-category">
+                <h4>Creative Production</h4>
+                <ul>
+                    <li>Adobe Fresco</li>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Blender (3D)</li>
+                    <li>Canon 80D + Lenses</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Philosophy Note -->
+    <div class="container philosophy">
+        <h2 class="philosophy-title">Operating Philosophy</h2>
+        <p class="philosophy-quote">"Messiness by Design"</p>
+        <p class="philosophy-text">Life resists neat containers. I embrace organized chaos - systems that allow for emergence rather than enforcing rigidity. Using a loose Zettelkasten methodology: <em>"If it's important, it floats back to the surface."</em></p>
+        <p class="philosophy-text">Whether it's theology, technology, or creative work - understanding the underlying patterns and connections is what creates mastery. I'm a systems thinker who tries (unsuccessfully) not to start three new hobbies each week.</p>
+    </div>
+
+    <!-- Testimonials Marquee -->
+    <div class="marquee" style="--duration: 48s;">
+        <div class="marquee__track">
+            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for which I am very thankful. <strong>- Luke H.</strong></article>
+
+            <!-- Duplicate for seamless loop -->
+            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for which I am very thankful. <strong>- Luke H.</strong></article>
+        </div>
+    </div>
+
+    <!-- What's Next -->
+    <div class="container">
+        <h1 class="section-title">What's Next</h1>
+        <p class="next-intro">This isn't the end of formal education - it's the formalization of what I've been doing all along: building, learning, and connecting disciplines that don't usually talk to each other.</p>
+        
+        <div class="goals">
+            <h3>Immediate Goals:</h3>
+            <ul class="goals-list">
+                <li>Begin IT Networking studies at Itawamba community college</li>
+                <li>Continue expanding and monitoring homelab infrastructure</li>
+                <li>Take on client projects</li>
+                <li>Spread the good news of the Gospel</li>
+                <li>Keep developing ANNA voice assistant</li>
+                <li>Make the world a little bit more positive</li>
+            </ul>
+        </div>
+
+        <p class="closing">I'm looking for opportunities that value depth over specialization, curiosity over credentials, and the ability to see connections others miss. The future is more infrastructure, deeper AI integration, expanded creative work, and continued exploration.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 JWL. Built with passion and love.</p>
+            <p class="footer-text">Contact: <a href="rabbit1.html">wlygon@lygonms.com</a></p>
+            <p class="footer-text"><a href="https://newsletter.lygonms.com/subscription/form" target="_blank">Subscribe to my newsletter</a> for occasional writing and updates.</p>
+            <p class="footer-note">After graduation, this will become my professional landing page with working navigation.</p>
+        </div>
+    </footer>
 </body>
 </html>

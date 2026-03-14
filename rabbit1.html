@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Link That Should Not Have Been</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glitch-container {
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 20px;
+            animation: glitch 3s infinite;
+        }
+        
+        .narration {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            max-width: 700px;
+            line-height: 1.8;
+            margin: 20px auto;
+            padding: 0 20px;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-in 0.5s forwards;
+        }
+        
+        .narration.delayed-1 { animation-delay: 2s; }
+        .narration.delayed-2 { animation-delay: 4s; }
+        .narration.delayed-3 { animation-delay: 6s; }
+        .narration.delayed-4 { animation-delay: 8s; }
+        
+        .emphasis {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .whisper {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #888;
+        }
+        
+        .button-container {
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeInText 1s ease-in 10s forwards;
+        }
+        
+        #home-button {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #4a7c9e 0%, #6b9ec4 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(74, 124, 158, 0.4);
+        }
+        
+        .click-counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+            color: #555;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 12s forwards;
+        }
+        
+        .countdown-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: 'Caveat', cursive;
+            text-align: right;
+            opacity: 0;
+            animation: fadeIn 1s ease-in 15s forwards;
+        }
+        
+        #countdown {
+            display: block;
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            margin-top: 5px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInText {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes glitch {
+            0%, 90%, 100% { 
+                transform: translate(0);
+                opacity: 1;
+            }
+            91% { 
+                transform: translate(-2px, 2px);
+                opacity: 0.8;
+            }
+            92% { 
+                transform: translate(2px, -2px);
+                opacity: 0.9;
+            }
+            93% { 
+                transform: translate(-2px, 2px);
+                opacity: 0.85;
+            }
+            94% { 
+                transform: translate(0);
+                opacity: 1;
+            }
+        }
+        
+        .background-text {
+            position: fixed;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-family: monospace;
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch-container">
+        <h1>You clicked a link, didn't you?</h1>
+        
+        <p class="narration">
+            Wilson <span class="emphasis">specifically</span> told you the links were disabled. 
+            He even put it in <span class="emphasis">bold text</span> in a cheerful yellow box at the very top of the page.
+        </p>
+        
+        <p class="narration delayed-1">
+            But you clicked anyway.
+        </p>
+        
+        <p class="narration delayed-2">
+            <span class="whisper">(It's okay. I would have clicked too. The forbidden is always more tempting, isn't it?)</span>
+        </p>
+        
+        <p class="narration delayed-3">
+            Here's the thing though: Wilson <span class="emphasis">knew</span> you'd click it. That's why this page exists. 
+            He built an entire page just for people who can't follow simple instructions.
+        </p>
+        
+        <p class="narration delayed-4">
+            He's probably laughing right now, watching the analytics, seeing another person end up here. 
+            <span class="whisper">You're not the first. You won't be the last.</span>
+        </p>
+        
+        <div class="button-container">
+            <a id="home-button" href="index.html">Go Back (This Time, Follow The Rules)</a>
+        </div>
+    </div>
+    
+    <div class="click-counter" id="counter">
+        People who couldn't resist: <span id="count">???</span>
+    </div>
+    
+    <div class="countdown-container">
+        <span class="whisper" style="font-size: 0.9rem; color: #666;">or wait and see what happens...</span>
+        <span id="countdown">4:00</span>
+    </div>
+    
+    <!-- All JavaScript inline for easy organization -->
+    <script>
+        // Generate subtle background text
+        const phrases = [
+            "why did you click",
+            "the button was right there",
+            "you were warned",
+            "curiosity killed the cat",
+            "but satisfaction brought it back",
+            "or did it",
+            "this is fine",
+            "everything is fine",
+            "trust the system",
+            "messiness by design",
+            "if it's important it floats back",
+            "you're still here",
+            "interesting choice",
+            "the countdown is watching you",
+            "time is relative",
+            "patience is a virtue"
+        ];
+        
+        function createBackgroundText() {
+            for (let i = 0; i < 20; i++) {
+                const div = document.createElement('div');
+                div.className = 'background-text';
+                div.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+                div.style.left = Math.random() * 100 + '%';
+                div.style.top = Math.random() * 100 + '%';
+                div.style.transform = `rotate(${Math.random() * 360}deg)`;
+                document.body.appendChild(div);
+            }
+        }
+        
+        // Call it immediately
+        createBackgroundText();
+        
+        // Random click counter
+        const count = Math.floor(Math.random() * 47) + 12;
+        document.getElementById('count').textContent = count;
+        
+        // Track how long they stay
+        let secondsHere = 0;
+        const startTime = Date.now();
+        
+        // 4-minute countdown
+        let countdownSeconds = 240; // 4 minutes
+        const countdownDisplay = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            countdownSeconds--;
+            const minutes = Math.floor(countdownSeconds / 60);
+            const seconds = countdownSeconds % 60;
+            countdownDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (countdownSeconds <= 0) {
+                clearInterval(countdownInterval);
+                // Redirect to level 2
+                window.location.href = 'rabbit2.html';
+            }
+            
+            // Visual warnings as countdown gets low
+            if (countdownSeconds === 60) {
+                countdownDisplay.style.color = '#ff9999';
+                countdownDisplay.style.fontSize = '2rem';
+            }
+            if (countdownSeconds === 30) {
+                countdownDisplay.style.color = '#ffaaaa';
+                countdownDisplay.style.fontSize = '2.2rem';
+            }
+            if (countdownSeconds === 10) {
+                countdownDisplay.style.color = '#ffcccc';
+                countdownDisplay.style.fontSize = '2.5rem';
+                countdownDisplay.style.animation = 'glitch 0.5s infinite';
+            }
+        }, 1000);
+        
+        // Title changes based on time spent
+        setInterval(() => {
+            secondsHere = Math.floor((Date.now() - startTime) / 1000);
+            if (secondsHere > 15 && secondsHere < 30) {
+                document.querySelector('h1').textContent = "You're still here?";
+            }
+            if (secondsHere > 30 && secondsHere < 45) {
+                document.querySelector('h1').textContent = "Okay, this is getting weird.";
+            }
+            if (secondsHere > 45 && secondsHere < 60) {
+                document.querySelector('h1').textContent = "You know you can just go back, right?";
+            }
+            if (secondsHere > 60 && secondsHere < 120) {
+                document.querySelector('h1').textContent = "Are you waiting for the countdown?";
+            }
+            if (secondsHere > 120 && secondsHere < 180) {
+                document.querySelector('h1').textContent = "You're really committed to this, huh?";
+            }
+            if (secondsHere > 180) {
+                document.querySelector('h1').textContent = "Almost there...";
+            }
+        }, 1000);
+        
+        // Console easter eggs
+        console.log('%c⚠️ CURIOSITY DETECTED', 'color: #ff6b6b; font-size: 20px; font-weight: bold;');
+        console.log('%cYou clicked a disabled link. Now you\'re here. And if you\'re reading this...', 'color: #888; font-size: 14px;');
+        console.log('%cYou\'re even more curious than Wilson thought.', 'color: #888; font-size: 14px;');
+        console.log('%c\nThe countdown is real, by the way. Something happens when it hits zero.', 'color: #ff6b6b; font-size: 12px;');
+        console.log('%cWill you wait? Or will you leave?', 'color: #666; font-size: 12px; font-style: italic;');
+    </script>
+</body>
+</html>
