@@ -3,37 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Wilson</title>
+    <title>Gallery | JWL</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">The Gallery</h1>
-        <h2 class="subtitle">Here I will display photos I have taken, edited, and am proud of, hope you enjoy</h2>
+
+    <!-- Hero -->
+    <div class="container gallery-hero">
+        <h1>The Gallery</h1>
+        <p>Photos I've taken, edited (some, not all :p), and am proud of. Hope you enjoy.</p>
+        <a class="back-link" href="index.html">← Back Home</a>
     </div>
 
-    <br>
-
-    <div class="container">
-        <a id="home-button" href="index.html">Back Home :)</a>
+    <!-- Masonry Gallery -->
+    <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" onclick="openLightbox(0)">
+            <img src="gallery/1.jpg" alt="Photo 1" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+            <img src="gallery/2.jpg" alt="Photo 2" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+            <img src="gallery/3.jpg" alt="Photo 3" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+            <img src="gallery/4.jpg" alt="Photo 4" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)">
+            <img src="gallery/5.jpg" alt="Photo 5" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)">
+            <img src="gallery/6.jpg" alt="Photo 6" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(6)">
+            <img src="gallery/7.jpg" alt="Photo 7" loading="lazy">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(7)">
+            <img src="gallery/8.jpg" alt="Photo 8" loading="lazy">
+        </div>
     </div>
-    <br>
 
-    <div class="gallery">
-  <div class="column">
-    <img src="gallery/1.jpg">
-    <img src="gallery/2.jpg">
-    <img src="gallery/3.jpg">
-  </div>
-  <div class="column">
-    <img src="gallery/4.jpg">
-    <img src="gallery/5.jpg">
-    <img src="gallery/6.jpg">
-  </div>
-  <div class="column">
-    <img src="gallery/7.jpg">
-    <img src="gallery/8.jpg">
-  </div>
-</div>
+    <p class="gallery-note">Click any photo to view full size. All photos © Wilson Lygon.</p>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+        <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changePhoto(-1)">‹</span>
+        <img id="lightboxImg" src="" alt="">
+        <span class="lightbox-nav lightbox-next" onclick="changePhoto(1)">›</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 JWL. Built with passion and love.</p>
+            <p class="footer-text">Contact: <a href="mailto:wlygon@lygonms.com">wlygon@lygonms.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const images = [
+            'gallery/1.jpg', 'gallery/2.jpg', 'gallery/3.jpg',
+            'gallery/4.jpg', 'gallery/5.jpg', 'gallery/6.jpg',
+            'gallery/7.jpg', 'gallery/8.jpg'
+        ];
+        let current = 0;
+
+        function openLightbox(index) {
+            current = index;
+            document.getElementById('lightboxImg').src = images[current];
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeLightboxOnBg(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        }
+
+        function changePhoto(dir) {
+            current = (current + dir + images.length) % images.length;
+            document.getElementById('lightboxImg').src = images[current];
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') changePhoto(1);
+            if (e.key === 'ArrowLeft') changePhoto(-1);
+        });
+    </script>
 </body>
 </html>
