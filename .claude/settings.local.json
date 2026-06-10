@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(ls -la /mnt/c/Users/Legos/Lygon/projects/4-WIP/port/music/)",
-      "Read(//mnt/c/Users/Legos/Lygon/projects/4-WIP/port/**)",
-      "PowerShell(ffmpeg -version 2>&1)"
-    ]
-  }
-}
