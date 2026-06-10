@@ -54,7 +54,7 @@
             margin: 0 auto 60px;
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            gap: 32px;
         }
 
         /* === TRACK CARD === */
@@ -66,74 +66,8 @@
             overflow: hidden;
         }
 
-        /* Now Playing Display */
-        .now-playing {
-            background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 32px 36px;
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .album-art {
-            width: 96px;
-            height: 96px;
-            flex-shrink: 0;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.6rem;
-            box-shadow: 0 4px 16px rgba(74, 124, 158, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .album-art-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 10px;
-        }
-
-        .track-display {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .np-title {
-            font-family: 'Caveat', cursive;
-            font-size: clamp(1.8rem, 4vw, 2.4rem);
-            font-weight: 700;
-            color: var(--text-dark);
-            line-height: 1.2;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .np-meta {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--text-gray);
-            margin-top: 4px;
-            letter-spacing: 0.03em;
-        }
-
-        .np-desc {
-            font-size: 13px;
-            color: var(--text-gray);
-            line-height: 1.6;
-            margin-top: 8px;
-            font-style: italic;
-        }
-
-        /* === SOUNDCLOUD EMBED === */
+        /* SC player sits flush at the top — no padding, no gaps */
         .sc-embed {
-            padding: 0;
             line-height: 0;
         }
 
@@ -143,17 +77,41 @@
             border: none;
         }
 
+        /* Track info below the player */
+        .track-info {
+            padding: 24px 32px 28px;
+            border-top: 1px solid var(--border);
+        }
+
+        .np-title {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .np-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 5px;
+            letter-spacing: 0.03em;
+        }
+
+        .np-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.65;
+            margin-top: 12px;
+            font-style: italic;
+            max-width: 600px;
+        }
+
         /* === RESPONSIVE === */
         @media (max-width: 600px) {
-            .now-playing {
-                padding: 24px 20px;
-                gap: 18px;
-            }
-
-            .album-art {
-                width: 72px;
-                height: 72px;
-                font-size: 2rem;
+            .track-info {
+                padding: 20px 20px 24px;
             }
         }
     </style>
@@ -172,37 +130,27 @@
 
         <!-- A Quiet Midnight -->
         <div class="track-card">
-            <div class="now-playing">
-                <div class="album-art">
-                    <img class="album-art-img" src="/music/AQM.JPG" alt="A Quiet Midnight">
-                </div>
-                <div class="track-display">
-                    <div class="np-title">A Quiet Midnight</div>
-                    <div class="np-meta">Ambient · Instrumental · 2024</div>
-                    <p class="np-desc">A late-night piece built around piano-bell layers and slow-moving pads. Written during a period of peace — no expectation, no time constraint, just me, my iPad, and a vision.</p>
-                </div>
-            </div>
             <div class="sc-embed">
-                <iframe height="315" scrolling="no" frameborder="no" allow="autoplay"
+                <iframe height="300" scrolling="no" frameborder="no" allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https://soundcloud.com/willy-lygon/a-quiet-midnight&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+            <div class="track-info">
+                <div class="np-title">A Quiet Midnight</div>
+                <div class="np-meta">Ambient · Instrumental · 2024</div>
+                <p class="np-desc">A late-night piece built around piano-bell layers and slow-moving pads. Written during a period of peace — no expectation, no time constraint, just me, my iPad, and a vision.</p>
             </div>
         </div>
 
         <!-- Acidic Memories -->
         <div class="track-card">
-            <div class="now-playing">
-                <div class="album-art">
-                    <img class="album-art-img" src="/music/AM.JPG" alt="Acidic Memories">
-                </div>
-                <div class="track-display">
-                    <div class="np-title">Acidic Memories</div>
-                    <div class="np-meta">Hard Rock · Experimental · 2025</div>
-                    <p class="np-desc">A more textured, distorted experiment — bass-heavy production with unique percussion and a powerhouse of strings and winds.</p>
-                </div>
-            </div>
             <div class="sc-embed">
-                <iframe height="315" scrolling="no" frameborder="no" allow="autoplay"
+                <iframe height="300" scrolling="no" frameborder="no" allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https://soundcloud.com/willy-lygon/stuck-in-my-lucid-mind&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+            <div class="track-info">
+                <div class="np-title">Acidic Memories</div>
+                <div class="np-meta">Hard Rock · Experimental · 2025</div>
+                <p class="np-desc">A more textured, distorted experiment — bass-heavy production with unique percussion and a powerhouse of strings and winds.</p>
             </div>
         </div>
 
