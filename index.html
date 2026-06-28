@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,19 @@
          PRIMARY SEO
          ═══════════════════════════════════ -->
     <title>Wilson Ligon | Polymath Technologist</title>
-    <meta name="description" content="Wilson Ligon — Systems engineer and polymath technologist based in Mississippi. Coding, photography, music, and faith.">
+    <meta name="description"
+        content="Wilson Ligon — Systems engineer and polymath technologist based in Mississippi. Coding, photography, music, and faith.">
     <meta name="author" content="Wilson Ligon">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lygonms.com/">
     <!-- ═══════════════════════════════════
-         OPEN GRAPH (Facebook, LinkedIn, Discord, iMessage)
+         OPEN GRAPH (Facebook, LinkedIn, iMessage)
          ═══════════════════════════════════ -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lygonms.com/">
     <meta property="og:title" content="Wilson Ligon | Polymath Technologist">
-    <meta property="og:description" content="Systems engineer and polymath technologist. Building at the intersection of technology, music, and faith.">
+    <meta property="og:description"
+        content="Systems engineer and polymath technologist. Building at the intersection of technology, music, and faith.">
     <meta property="og:site_name" content="Wilson Ligon">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://lygonms.com/og-image.png">
@@ -32,7 +35,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://lygonms.com/">
     <meta name="twitter:title" content="Wilson Ligon | Web Developer & Polymath Technologist">
-    <meta name="twitter:description" content="Systems engineer and polymath technologist. Building at the intersection of technology, music, and faith.">
+    <meta name="twitter:description"
+        content="Systems engineer and polymath technologist. Building at the intersection of technology, music, and faith.">
     <meta name="twitter:image" content="https://lygonms.com/og-image.png">
     <meta name="twitter:image:alt" content="Wilson Ligon — Polymath Technologist">
     <!-- ═══════════════════════════════════
@@ -82,1036 +86,1374 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="android-chrome" sizes="192x192x" href="/android-chrome-192x192.png">
-    <link rel="android-chrome" sizes="512x512" href="/android-chrome-512x512.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#4a7c9e">
     <!-- ═══════════════════════════════════
          FONTS & STYLES
          ═══════════════════════════════════ -->
     <style>
-/* === BASE STYLES === */
-:root {
-    --paper-bg: #f5f5f0;
-    --card-bg: #ffffff;
-    --text-dark: #2a2a2a;
-    --text-gray: #5a5a5a;
-    --accent: #4a7c9e;
-    --accent-light: #6b9ec4;
-    --border: #d0d0c8;
-    --shadow: rgba(0, 0, 0, 0.08);
-    --highlight: #ffd166;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    overflow-x: hidden;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: var(--paper-bg);
-    color: var(--text-dark);
-    line-height: 1.6;
-    padding: 20px;
-    padding-bottom: 60px;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-}
-
-.links-hint {
-  font-style: italic;
-  text-decoration: line-through;
-}
-
-/* Handwritten elements use Caveat */
-h1, h2, h3, .hero-title, .section-title, .question {
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
-}
-
-/* === CONTAINER CARDS === */
-.container {
-    max-width: 820px;
-    margin: 0 auto 40px;
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px var(--shadow);
-    border: 1px solid var(--border);
-}
-
-/* === NOTICE CARD === */
-.notice-card {
-    max-width: 820px;
-    margin: 0 auto 30px;
-    background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%);
-    padding: 20px 30px;
-    border-radius: 12px;
-    border: 2px solid #ffd166;
-    box-shadow: 0 2px 8px rgba(255, 209, 102, 0.2);
-}
-
-.notice-card p {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-dark);
-    margin: 0;
-}
-
-/* === HERO SECTION === */
-.hero {
-    text-align: center;
-    padding: 60px 40px;
-}
-
-.hero-title {
-    font-size: clamp(4rem, 10vw, 7rem);
-    margin-bottom: 10px;
-    line-height: 1;
-    color: var(--text-dark);
-}
-
-.hero-subtitle {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 20px;
-    color: var(--accent);
-}
-
-.hero-description {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    color: var(--text-gray);
-}
-
-.highlight {
-    background: linear-gradient(120deg, var(--highlight) 0%, var(--highlight) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 40%;
-    background-position: 0 85%;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.tagline {
-    font-size: 16px;
-    color: var(--text-gray);
-    margin-top: 20px;
-}
-
-/* === SECTION TITLES === */
-.section-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: 30px;
-    text-align: center;
-    color: var(--accent);
-    line-height: 1.2;
-}
-
-.section-intro {
-    text-align: center;
-    font-size: 17px;
-    color: var(--text-gray);
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* === ABOUT SECTION === */
-.about-block {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--border);
-}
-
-.about-block:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.question {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin-bottom: 15px;
-    color: var(--accent);
-}
-
-.answer {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text-gray);
-}
-
-/* === PROJECT CARDS === */
-.project-card {
-    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    border-left-color: var(--accent-light);
-    box-shadow: 0 4px 16px var(--shadow);
-    transform: translateX(4px);
-}
-
-.project-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-bottom: 12px;
-    color: var(--text-dark);
-}
-
-.project-description {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-gray);
-}
-
-  /* === TIMELINE CONTAINER === */
-  .timeline-section {
-    position: relative;
-    padding: 40px;
-  }
- 
-  /* Vertical spine */
-  .timeline-spine {
-    position: absolute;
-    left: 50%;
-    top: 80px;
-    bottom: 40px;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent), var(--accent-light), transparent);
-    transform: translateX(-50%);
-    opacity: 0.35;
-  }
- 
-  /* === INDIVIDUAL ENTRY === */
-  .timeline-entries {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
- 
-  .tl-entry {
-    display: grid;
-    grid-template-columns: 1fr 48px 1fr;
-    align-items: start;
-    margin-bottom: 48px;
-    cursor: pointer;
-  }
- 
-  /* Left entries: content left, dot center, empty right */
-  .tl-entry.left .tl-content { grid-column: 1; grid-row: 1; }
-  .tl-entry.left .tl-dot    { grid-column: 2; grid-row: 1; }
-  .tl-entry.left .tl-empty  { grid-column: 3; grid-row: 1; }
- 
-  /* Right entries: empty left, dot center, content right */
-  .tl-entry.right .tl-empty   { grid-column: 1; grid-row: 1; }
-  .tl-entry.right .tl-dot     { grid-column: 2; grid-row: 1; }
-  .tl-entry.right .tl-content { grid-column: 3; grid-row: 1; }
- 
-  /* === DOT === */
-  .tl-dot {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 14px;
-    position: relative;
-    z-index: 2;
-  }
- 
-  .tl-dot-inner {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--card-bg);
-    border: 3px solid var(--accent);
-    transition: all 0.3s ease;
-    box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.3);
-  }
- 
-  .tl-entry:hover .tl-dot-inner,
-  .tl-entry.active .tl-dot-inner {
-    background: var(--accent);
-    box-shadow: 0 0 0 6px rgba(74, 124, 158, 0.2);
-    transform: scale(1.2);
-  }
- 
-  /* === CONTENT CARD === */
-  .tl-content {
-    padding: 4px 16px;
-  }
- 
-  .tl-card {
-    background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 22px;
-    transition: all 0.3s ease;
-    position: relative;
-  }
- 
-  .tl-entry.left .tl-card {
-    border-right: 4px solid var(--accent);
-  }
- 
-  .tl-entry.right .tl-card {
-    border-left: 4px solid var(--accent);
-  }
- 
-  .tl-entry:hover .tl-card,
-  .tl-entry.active .tl-card {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-    transform: translateY(-2px);
-  }
- 
-  /* Year badge */
-  .tl-year {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: rgba(74, 124, 158, 0.08);
-    border: 1px solid rgba(74, 124, 158, 0.2);
-    border-radius: 999px;
-    padding: 2px 10px;
-    display: inline-block;
-    margin-bottom: 10px;
-  }
- 
-  .tl-title {
-    font-family: 'Caveat', cursive;
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 6px;
-    line-height: 1.2;
-  }
- 
-  .tl-desc {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--text-gray);
-    margin-bottom: 14px;
-  }
- 
-  /* Tech tags */
-  .tl-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 14px;
-  }
- 
-  .tl-tag {
-    font-size: 11px;
-    font-family: 'JetBrains Mono', monospace;
-    padding: 3px 9px;
-    border-radius: 4px;
-    background: rgba(74, 124, 158, 0.08);
-    border: 1px solid rgba(74, 124, 158, 0.18);
-    color: var(--accent);
-    letter-spacing: 0.03em;
-  }
- 
-  /* Visit link */
-  .tl-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: none !important;
-    transition: gap 0.2s ease, color 0.2s ease;
-  }
- 
-  .tl-link:hover {
-    color: var(--accent-light);
-    gap: 8px;
-  }
- 
-  .tl-link::after {
-    content: '→';
-    font-size: 14px;
-  }
- 
-  /* === EXPANDED PANEL === */
-  .tl-expand {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-    opacity: 0;
-  }
- 
-  .tl-entry.active .tl-expand {
-    max-height: 400px;
-    opacity: 1;
-  }
- 
-  .tl-expand-inner {
-    padding-top: 14px;
-    border-top: 1px solid var(--border);
-    margin-top: 14px;
-  }
- 
-  .tl-expand-inner p {
-    font-size: 13px;
-    color: var(--text-gray);
-    line-height: 1.7;
-  }
- 
-  /* === COLOR ACCENT PER PROJECT === */
-  .tl-entry[data-project="lava"] .tl-dot-inner { border-color: #e07b39; }
-  .tl-entry[data-project="lava"]:hover .tl-dot-inner,
-  .tl-entry[data-project="lava"].active .tl-dot-inner { background: #e07b39; box-shadow: 0 0 0 6px rgba(224,123,57,0.2); }
-  .tl-entry[data-project="lava"] .tl-card { border-color: var(--border); }
-  .tl-entry[data-project="lava"].left .tl-card { border-right-color: #e07b39; }
-  .tl-entry[data-project="lava"] .tl-year { color: #e07b39; background: rgba(224,123,57,0.08); border-color: rgba(224,123,57,0.2); }
-  .tl-entry[data-project="lava"] .tl-tag { color: #e07b39; background: rgba(224,123,57,0.07); border-color: rgba(224,123,57,0.18); }
-  .tl-entry[data-project="lava"] .tl-link { color: #e07b39; }
- 
-  .tl-entry[data-project="weather"] .tl-dot-inner { border-color: #00b4e6; }
-  .tl-entry[data-project="weather"]:hover .tl-dot-inner,
-  .tl-entry[data-project="weather"].active .tl-dot-inner { background: #00b4e6; box-shadow: 0 0 0 6px rgba(0,180,230,0.2); }
-  .tl-entry[data-project="weather"].left .tl-card { border-right-color: #00b4e6; }
-  .tl-entry[data-project="weather"] .tl-year { color: #00b4e6; background: rgba(0,180,230,0.08); border-color: rgba(0,180,230,0.2); }
-  .tl-entry[data-project="weather"] .tl-tag { color: #00b4e6; background: rgba(0,180,230,0.07); border-color: rgba(0,180,230,0.18); }
-  .tl-entry[data-project="weather"] .tl-link { color: #00b4e6; }
- 
-  .tl-entry[data-project="mc"] .tl-dot-inner { border-color: #7c6ad6; }
-  .tl-entry[data-project="mc"]:hover .tl-dot-inner,
-  .tl-entry[data-project="mc"].active .tl-dot-inner { background: #7c6ad6; box-shadow: 0 0 0 6px rgba(124,106,214,0.2); }
-  .tl-entry[data-project="mc"].left .tl-card { border-right-color: #7c6ad6; }
-  .tl-entry[data-project="mc"] .tl-year { color: #7c6ad6; background: rgba(124,106,214,0.08); border-color: rgba(124,106,214,0.2); }
-  .tl-entry[data-project="mc"] .tl-tag { color: #7c6ad6; background: rgba(124,106,214,0.07); border-color: rgba(124,106,214,0.18); }
-  .tl-entry[data-project="mc"] .tl-link { color: #7c6ad6; }
- 
-  .tl-entry[data-project="wdw"] .tl-dot-inner { border-color: #2ecc71; }
-  .tl-entry[data-project="wdw"]:hover .tl-dot-inner,
-  .tl-entry[data-project="wdw"].active .tl-dot-inner { background: #2ecc71; box-shadow: 0 0 0 6px rgba(46,204,113,0.2); }
-  .tl-entry[data-project="wdw"].right .tl-card { border-left-color: #2ecc71; }
-  .tl-entry[data-project="wdw"] .tl-year { color: #2ecc71; background: rgba(46,204,113,0.08); border-color: rgba(46,204,113,0.2); }
-  .tl-entry[data-project="wdw"] .tl-tag { color: #2ecc71; background: rgba(46,204,113,0.07); border-color: rgba(46,204,113,0.18); }
-  .tl-entry[data-project="wdw"] .tl-link { color: #2ecc71; }
-
-  .tl-entry[data-project="church"] .tl-dot-inner { border-color: #64433d; }
-  .tl-entry[data-project="church"]:hover .tl-dot-inner,
-  .tl-entry[data-project="church"].active .tl-dot-inner { background: #64433d; box-shadow: 0 0 0 6px rgba(100,67,61,0.2); }
-  .tl-entry[data-project="church"].left .tl-card { border-right-color: #64433d; }
-  .tl-entry[data-project="church"] .tl-year { color: #64433d; background: rgba(100,67,61,0.08); border-color: rgba(100,67,61,0.2); }
-  .tl-entry[data-project="church"] .tl-tag { color: #64433d; background: rgba(100,67,61,0.07); border-color: rgba(100,67,61,0.18); }
-  .tl-entry[data-project="church"] .tl-link { color: #64433d; }
-
-  .tl-entry[data-project="aqm"] .tl-dot-inner { border-color: #7aa8c7; }
-  .tl-entry[data-project="aqm"]:hover .tl-dot-inner,
-  .tl-entry[data-project="aqm"].active .tl-dot-inner { background: #7aa8c7; box-shadow: 0 0 0 6px rgba(122,168,199,0.2); }
-  .tl-entry[data-project="aqm"].right .tl-card { border-left-color: #7aa8c7; }
-  .tl-entry[data-project="aqm"] .tl-year { color: #7aa8c7; background: rgba(122,168,199,0.08); border-color: rgba(122,168,199,0.2); }
-  .tl-entry[data-project="aqm"] .tl-tag { color: #7aa8c7; background: rgba(122,168,199,0.07); border-color: rgba(122,168,199,0.18); }
-  .tl-entry[data-project="aqm"] .tl-link { color: #7aa8c7; }
-
-  .tl-entry[data-project="acidic"] .tl-dot-inner { border-color: #c0392b; }
-  .tl-entry[data-project="acidic"]:hover .tl-dot-inner,
-  .tl-entry[data-project="acidic"].active .tl-dot-inner { background: #c0392b; box-shadow: 0 0 0 6px rgba(192,57,43,0.2); }
-  .tl-entry[data-project="acidic"].right .tl-card { border-left-color: #c0392b; }
-  .tl-entry[data-project="acidic"] .tl-year { color: #c0392b; background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.2); }
-  .tl-entry[data-project="acidic"] .tl-tag { color: #c0392b; background: rgba(192,57,43,0.07); border-color: rgba(192,57,43,0.18); }
-  .tl-entry[data-project="acidic"] .tl-link { color: #c0392b; }
- 
-  /* === RESPONSIVE: stack on mobile (handled at 768px above) === */
-
-
-/* === TOOLS SECTION === */
-.tools-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.tool-category {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.tool-category h4 {
-    font-family: 'Caveat', cursive;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    color: var(--accent);
-}
-
-.tool-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tool-category li {
-    font-size: 15px;
-    color: var(--text-gray);
-    padding: 8px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.tool-category li::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-}
-
-/* === PHILOSOPHY SECTION === */
-.philosophy {
-    background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%);
-    border-left: 4px solid var(--accent);
-}
-
-.philosophy-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    text-align: center;
-    color: var(--accent);
-    margin-bottom: 20px;
-}
-
-.philosophy-quote {
-    font-family: 'Caveat', cursive;
-    font-size: clamp(3rem, 4vw, 2.5rem);
-    text-align: center;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.philosophy-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text-gray);
-    margin-bottom: 15px;
-    text-align: center;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* === MARQUEE TESTIMONIALS === */
-.marquee {
-    --gap: 20px;
-    --duration: 40s;
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-    margin: 40px 0;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-@keyframes marquee-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-}
-
-.marquee__track {
-    display: flex;
-    gap: var(--gap);
-    width: max-content;
-    will-change: transform;
-    animation: marquee-scroll var(--duration) linear infinite;
-}
-
-.marquee:hover .marquee__track {
-    animation-play-state: paused;
-}
-
-.review {
-    font-family: 'Inter', sans-serif;
-    flex: 0 0 auto;
-    min-width: 320px;
-    max-width: 480px;
-    padding: 20px 24px;
-    border-radius: 12px;
-    border: 2px solid var(--border);
-    background: var(--card-bg);
-    box-shadow: 0 2px 8px var(--shadow);
-    line-height: 1.6;
-    font-size: 15px;
-    color: var(--text-gray);
-}
-
-.review strong {
-    color: var(--accent);
-    font-weight: 600;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .marquee__track {
-        transform: none !important;
-    }
-}
-
-/* === WHAT'S NEXT SECTION === */
-.next-intro {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    color: var(--text-gray);
-}
-
-.goals {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border-left: 4px solid var(--accent);
-    padding: 25px;
-    border-radius: 8px;
-    margin: 30px 0;
-}
-
-.goals h3 {
-    font-family: 'Caveat', cursive;
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-.goals-list {
-    list-style: none;
-    padding: 0;
-}
-
-.goals-list li {
-    font-size: 16px;
-    color: var(--text-gray);
-    padding: 12px 0;
-    padding-left: 28px;
-    position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.goals-list li:last-child {
-    border-bottom: none;
-}
-
-.goals-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.closing {
-    font-size: 17px;
-    line-height: 1.8;
-    color: var(--text-gray);
-    margin-top: 30px;
-    font-style: italic;
-}
-
-/* === LINKS === */
-a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: all 0.2s ease;
-}
-
-a:hover {
-    color: var(--accent-light);
-    border-bottom-color: var(--accent-light);
-}
-
-/* === FOOTER === */
-footer {
-    max-width: 820px;
-    margin: 60px auto 0;
-    padding: 30px 40px;
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-text {
-    font-size: 15px;
-    color: var(--text-gray);
-}
-
-.footer-note {
-    font-size: 14px;
-    color: var(--text-gray);
-    font-style: italic;
-    margin-top: 10px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border);
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-    body {
-        padding: 12px;
-    }
-
-    .container {
-        padding: 28px 20px;
-        margin-bottom: 24px;
-    }
-
-    .hero {
-        padding: 36px 20px;
-    }
-
-    .notice-card {
-        padding: 16px 20px;
-    }
-
-    .tools-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-    }
-
-    .review {
-        min-width: 260px;
-        max-width: 360px;
-    }
-
-    /* Collapse timeline to single column at 768px */
-    .timeline-spine {
-        left: 20px;
-    }
-
-    .tl-entry {
-        grid-template-columns: 40px 1fr;
-    }
-
-    .tl-entry.left .tl-content,
-    .tl-entry.right .tl-content  { grid-column: 2; grid-row: 1; }
-    .tl-entry.left .tl-dot,
-    .tl-entry.right .tl-dot      { grid-column: 1; grid-row: 1; }
-    .tl-entry.left .tl-empty,
-    .tl-entry.right .tl-empty    { display: none; }
-
-    .tl-entry.left .tl-card,
-    .tl-entry.right .tl-card  { border-right: 1px solid var(--border); border-left: 4px solid; }
-
-    /* Re-apply per-project accent colors for left border on mobile */
-    .tl-entry[data-project="lava"] .tl-card      { border-left-color: #e07b39; }
-    .tl-entry[data-project="weather"] .tl-card   { border-left-color: #00b4e6; }
-    .tl-entry[data-project="mc"] .tl-card        { border-left-color: #7c6ad6; }
-    .tl-entry[data-project="wdw"] .tl-card       { border-left-color: #2ecc71; }
-    .tl-entry[data-project="church"] .tl-card    { border-left-color: #64433d; }
-
-    .tl-dot { padding-top: 16px; justify-content: flex-end; padding-right: 8px; }
-}
-
-/* === iPad 4th Gen — portrait (768×1024) and landscape (1024×768) === */
-@media only screen
-    and (min-device-width: 768px)
-    and (max-device-width: 1024px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-
-    .container {
-        max-width: 720px;
-    }
-
-    .section-title {
-        font-size: 3rem;
-    }
-
-    .tools-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Prevent marquee from causing horizontal overflow */
-    .marquee {
-        max-width: 100vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 25px 16px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .project-card {
-        padding: 20px;
-    }
-
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* === PRINT STYLES === */
-@media print {
-    body {
-        background: white;
-        padding: 0;
-    }
-
-    .container {
-        box-shadow: none;
-        border: 1px solid #ccc;
-        page-break-inside: avoid;
-    }
-
-    .marquee {
-        display: none;
-    }
-
-    .notice-card {
-        display: none;
-    }
-
-    a {
-        color: var(--text-dark);
-        border-bottom: 1px solid var(--text-dark);
-    }
-}
-
-/* === CREATIVE SECTION === */
-.creative-block {
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid var(--border);
-}
-
-.creative-block:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.creative-block-title {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: var(--accent);
-    margin-bottom: 8px;
-}
-
-.creative-block-desc {
-    font-size: 15px;
-    color: var(--text-gray);
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-.gallery-grid-inline {
-    columns: 3;
-    column-gap: 12px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 640px) {
-    .gallery-grid-inline { columns: 2; }
-}
-
-@media (max-width: 400px) {
-    .gallery-grid-inline { columns: 1; }
-}
-
-.music-tracks {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.track-card {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    border-radius: 10px;
-    padding: 18px 22px;
-}
-
-.track-icon {
-    width: 62px;
-    height: 62px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 8px var(--shadow);
-}
-
-.track-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.track-title {
-    font-family: 'Caveat', cursive;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    line-height: 1.2;
-}
-
-.track-meta {
-    font-size: 13px;
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--text-gray);
-    margin-top: 4px;
-    letter-spacing: 0.02em;
-}
-
-.track-desc {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--text-gray);
-    margin-top: 10px;
-}
-
-.prints-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 16px;
-    margin-top: 8px;
-}
-
-.print-placeholder {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--card-bg);
-}
-
-.print-img-slot {
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, #f0f0eb 0%, #e8e8e3 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: var(--text-gray);
-    font-style: italic;
-}
-
-.print-label {
-    padding: 10px 14px;
-    color: var(--text-gray);
-    font-family: 'Caveat', cursive;
-    font-size: 1.2rem;
-}
-
-.business-card {
-    background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    padding: 24px;
-}
-
-.business-desc {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--text-gray);
-    margin-bottom: 16px;
-}
-
-.business-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.business-tag {
-    font-size: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    padding: 3px 10px;
-    border-radius: 4px;
-    background: rgba(74, 124, 158, 0.08);
-    border: 1px solid rgba(74, 124, 158, 0.18);
-    color: var(--accent);
-}
-
-/* === FRIENDS PHOTO STRIP === */
-.friends-section {
-    padding-bottom: 28px;
-}
-
-.friends-strip {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding: 8px 0 14px;
-    /* hide scrollbar but keep scrollable */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.friends-strip::-webkit-scrollbar {
-    display: none;
-}
-
-.friends-strip img {
-    height: 220px;
-    width: auto;
-    flex-shrink: 0;
-    border-radius: 10px;
-    object-fit: cover;
-    scroll-snap-align: start;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 10px var(--shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: pointer;
-}
-
-.friends-strip img:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
-}
-
-.friends-hint {
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-gray);
-    font-style: italic;
-    opacity: 0.7;
-    margin-top: 4px;
-}
-
-/* === GALLERY PAGE SPECIFIC === */
+        /* === BASE STYLES === */
+        :root {
+            --paper-bg: #f5f5f0;
+            --card-bg: #ffffff;
+            --text-dark: #2a2a2a;
+            --text-gray: #5a5a5a;
+            --accent: #4a7c9e;
+            --accent-light: #6b9ec4;
+            --border: #d0d0c8;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --highlight: #ffd166;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--paper-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 20px;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .links-hint {
+            font-style: italic;
+            text-decoration: line-through;
+        }
+
+        /* Handwritten elements use Caveat */
+        h1,
+        h2,
+        h3,
+        .hero-title,
+        .section-title,
+        .question {
+            font-family: 'Caveat', cursive;
+            font-weight: 700;
+        }
+
+        /* === CONTAINER CARDS === */
+        .container {
+            max-width: 820px;
+            margin: 0 auto 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        /* === NOTICE CARD === */
+        .notice-card {
+            max-width: 820px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%);
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 2px solid #ffd166;
+            box-shadow: 0 2px 8px rgba(255, 209, 102, 0.2);
+        }
+
+        .notice-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 10vw, 7rem);
+            margin-bottom: 10px;
+            line-height: 1;
+            color: var(--text-dark);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            color: var(--text-gray);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--highlight) 0%, var(--highlight) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 85%;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-top: 20px;
+        }
+
+        /* === SECTION TITLES === */
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* === ABOUT SECTION === */
+        .about-block {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .answer {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        /* === PROJECT CARDS === */
+        .project-card {
+            background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-left-color: var(--accent-light);
+            box-shadow: 0 4px 16px var(--shadow);
+            transform: translateX(4px);
+        }
+
+        .project-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .project-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        /* === TIMELINE CONTAINER === */
+        .timeline-section {
+            position: relative;
+            padding: 40px;
+        }
+
+        /* Vertical spine */
+        .timeline-spine {
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            bottom: 40px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), var(--accent-light), transparent);
+            transform: translateX(-50%);
+            opacity: 0.35;
+        }
+
+        /* === INDIVIDUAL ENTRY === */
+        .timeline-entries {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .tl-entry {
+            display: grid;
+            grid-template-columns: 1fr 48px 1fr;
+            align-items: start;
+            margin-bottom: 48px;
+            cursor: pointer;
+        }
+
+        /* Left entries: content left, dot center, empty right */
+        .tl-entry.left .tl-content {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .tl-entry.left .tl-dot {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .tl-entry.left .tl-empty {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        /* Right entries: empty left, dot center, content right */
+        .tl-entry.right .tl-empty {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .tl-entry.right .tl-dot {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .tl-entry.right .tl-content {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        /* === DOT === */
+        .tl-dot {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tl-dot-inner {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 3px solid var(--accent);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 0 rgba(74, 124, 158, 0.3);
+        }
+
+        .tl-entry:hover .tl-dot-inner,
+        .tl-entry.active .tl-dot-inner {
+            background: var(--accent);
+            box-shadow: 0 0 0 6px rgba(74, 124, 158, 0.2);
+            transform: scale(1.2);
+        }
+
+        /* === CONTENT CARD === */
+        .tl-content {
+            padding: 4px 16px;
+        }
+
+        .tl-card {
+            background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px 22px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tl-entry.left .tl-card {
+            border-right: 4px solid var(--accent);
+        }
+
+        .tl-entry.right .tl-card {
+            border-left: 4px solid var(--accent);
+        }
+
+        .tl-entry:hover .tl-card,
+        .tl-entry.active .tl-card {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+            transform: translateY(-2px);
+        }
+
+        /* Year badge */
+        .tl-year {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(74, 124, 158, 0.08);
+            border: 1px solid rgba(74, 124, 158, 0.2);
+            border-radius: 999px;
+            padding: 2px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .tl-title {
+            font-family: 'Caveat', cursive;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .tl-desc {
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--text-gray);
+            margin-bottom: 14px;
+        }
+
+        /* Tech tags */
+        .tl-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .tl-tag {
+            font-size: 11px;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 3px 9px;
+            border-radius: 4px;
+            background: rgba(74, 124, 158, 0.08);
+            border: 1px solid rgba(74, 124, 158, 0.18);
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+
+        /* Visit link */
+        .tl-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: none !important;
+            transition: gap 0.2s ease, color 0.2s ease;
+        }
+
+        .tl-link:hover {
+            color: var(--accent-light);
+            gap: 8px;
+        }
+
+        .tl-link::after {
+            content: '→';
+            font-size: 14px;
+        }
+
+        /* === EXPANDED PANEL === */
+        .tl-expand {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .tl-entry.active .tl-expand {
+            max-height: 400px;
+            opacity: 1;
+        }
+
+        .tl-expand-inner {
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            margin-top: 14px;
+        }
+
+        .tl-expand-inner p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* === NEW PROJECT TYPES === */
+
+        .tl-entry[data-project="chess"] .tl-dot-inner {
+            border-color: #8e44ad;
+        }
+
+        .tl-entry[data-project="chess"]:hover .tl-dot-inner,
+        .tl-entry[data-project="chess"].active .tl-dot-inner {
+            background: #8e44ad;
+            box-shadow: 0 0 0 6px rgba(142, 68, 173, 0.2);
+        }
+
+        .tl-entry[data-project="chess"].left .tl-card {
+            border-right-color: #8e44ad;
+        }
+
+        .tl-entry[data-project="chess"].right .tl-card {
+            border-left-color: #8e44ad;
+        }
+
+        .tl-entry[data-project="chess"] .tl-year {
+            color: #8e44ad;
+            background: rgba(142, 68, 173, 0.08);
+            border-color: rgba(142, 68, 173, 0.2);
+        }
+
+        .tl-entry[data-project="chess"] .tl-tag {
+            color: #8e44ad;
+            background: rgba(142, 68, 173, 0.07);
+            border-color: rgba(142, 68, 173, 0.18);
+        }
+
+        .tl-entry[data-project="chess"] .tl-link {
+            color: #8e44ad;
+        }
+
+        .tl-entry[data-project="photo"] .tl-dot-inner {
+            border-color: #e6225d;
+        }
+
+        .tl-entry[data-project="photo"]:hover .tl-dot-inner,
+        .tl-entry[data-project="photo"].active .tl-dot-inner {
+            background: #e6225d;
+            box-shadow: 0 0 0 6px rgba(230, 34, 125, 0.2);
+        }
+
+        .tl-entry[data-project="photo"].left .tl-card {
+            border-right-color: #e6225d;
+        }
+
+        .tl-entry[data-project="photo"].right .tl-card {
+            border-left-color: #e6225d;
+        }
+
+        .tl-entry[data-project="photo"] .tl-year {
+            color: #e6225d;
+            background: rgba(230, 34, 125, 0.08);
+            border-color: rgba(230, 34, 125, 0.2);
+        }
+
+        .tl-entry[data-project="photo"] .tl-tag {
+            color: #e6225d;
+            background: rgba(230, 34, 125, 0.07);
+            border-color: rgba(230, 34, 125, 0.18);
+        }
+
+        .tl-entry[data-project="photo"] .tl-link {
+            color: #e6225d;
+        }
+
+        .tl-entry[data-project="business"] .tl-dot-inner {
+            border-color: #27ae60;
+        }
+
+        .tl-entry[data-project="business"]:hover .tl-dot-inner,
+        .tl-entry[data-project="business"].active .tl-dot-inner {
+            background: #27ae60;
+            box-shadow: 0 0 0 6px rgba(39, 174, 96, 0.2);
+        }
+
+        .tl-entry[data-project="business"].left .tl-card {
+            border-right-color: #27ae60;
+        }
+
+        .tl-entry[data-project="business"].right .tl-card {
+            border-left-color: #27ae60;
+        }
+
+        .tl-entry[data-project="business"] .tl-year {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.08);
+            border-color: rgba(39, 174, 96, 0.2);
+        }
+
+        .tl-entry[data-project="business"] .tl-tag {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.07);
+            border-color: rgba(39, 174, 96, 0.18);
+        }
+
+        .tl-entry[data-project="business"] .tl-link {
+            color: #27ae60;
+        }
+
+        .tl-entry[data-project="lava"] .tl-dot-inner {
+            border-color: #e07b39;
+        }
+
+        .tl-entry[data-project="lava"]:hover .tl-dot-inner,
+        .tl-entry[data-project="lava"].active .tl-dot-inner {
+            background: #e07b39;
+            box-shadow: 0 0 0 6px rgba(224, 123, 57, 0.2);
+        }
+
+        .tl-entry[data-project="lava"].right .tl-card {
+            border-left-color: #e07b39;
+        }
+
+        .tl-entry[data-project="lava"] .tl-year {
+            color: #e07b39;
+            background: rgba(224, 123, 57, 0.08);
+            border-color: rgba(224, 123, 57, 0.2);
+        }
+
+        .tl-entry[data-project="lava"] .tl-tag {
+            color: #e07b39;
+            background: rgba(224, 123, 57, 0.07);
+            border-color: rgba(224, 123, 57, 0.18);
+        }
+
+        .tl-entry[data-project="lava"] .tl-link {
+            color: #e07b39;
+        }
+
+        .tl-entry[data-project="weather"] .tl-dot-inner {
+            border-color: #00b4e6;
+        }
+
+        .tl-entry[data-project="weather"]:hover .tl-dot-inner,
+        .tl-entry[data-project="weather"].active .tl-dot-inner {
+            background: #00b4e6;
+            box-shadow: 0 0 0 6px rgba(0, 180, 230, 0.2);
+        }
+
+        .tl-entry[data-project="weather"].left .tl-card {
+            border-right-color: #00b4e6;
+        }
+
+        .tl-entry[data-project="weather"] .tl-year {
+            color: #00b4e6;
+            background: rgba(0, 180, 230, 0.08);
+            border-color: rgba(0, 180, 230, 0.2);
+        }
+
+        .tl-entry[data-project="weather"] .tl-tag {
+            color: #00b4e6;
+            background: rgba(0, 180, 230, 0.07);
+            border-color: rgba(0, 180, 230, 0.18);
+        }
+
+        .tl-entry[data-project="weather"] .tl-link {
+            color: #00b4e6;
+        }
+
+        .tl-entry[data-project="mc"] .tl-dot-inner {
+            border-color: #7c6ad6;
+        }
+
+        .tl-entry[data-project="mc"]:hover .tl-dot-inner,
+        .tl-entry[data-project="mc"].active .tl-dot-inner {
+            background: #7c6ad6;
+            box-shadow: 0 0 0 6px rgba(124, 106, 214, 0.2);
+        }
+
+        .tl-entry[data-project="mc"].left .tl-card {
+            border-right-color: #7c6ad6;
+        }
+
+        .tl-entry[data-project="mc"] .tl-year {
+            color: #7c6ad6;
+            background: rgba(124, 106, 214, 0.08);
+            border-color: rgba(124, 106, 214, 0.2);
+        }
+
+        .tl-entry[data-project="mc"] .tl-tag {
+            color: #7c6ad6;
+            background: rgba(124, 106, 214, 0.07);
+            border-color: rgba(124, 106, 214, 0.18);
+        }
+
+        .tl-entry[data-project="mc"] .tl-link {
+            color: #7c6ad6;
+        }
+
+        .tl-entry[data-project="wdw"] .tl-dot-inner {
+            border-color: #2ecc71;
+        }
+
+        .tl-entry[data-project="wdw"]:hover .tl-dot-inner,
+        .tl-entry[data-project="wdw"].active .tl-dot-inner {
+            background: #2ecc71;
+            box-shadow: 0 0 0 6px rgba(46, 204, 113, 0.2);
+        }
+
+        .tl-entry[data-project="wdw"].left .tl-card {
+            border-right-color: #2ecc71;
+        }
+
+        .tl-entry[data-project="wdw"] .tl-year {
+            color: #2ecc71;
+            background: rgba(46, 204, 113, 0.08);
+            border-color: rgba(46, 204, 113, 0.2);
+        }
+
+        .tl-entry[data-project="wdw"] .tl-tag {
+            color: #2ecc71;
+            background: rgba(46, 204, 113, 0.07);
+            border-color: rgba(46, 204, 113, 0.18);
+        }
+
+        .tl-entry[data-project="wdw"] .tl-link {
+            color: #2ecc71;
+        }
+
+        .tl-entry[data-project="church"] .tl-dot-inner {
+            border-color: #64433d;
+        }
+
+        .tl-entry[data-project="church"]:hover .tl-dot-inner,
+        .tl-entry[data-project="church"].active .tl-dot-inner {
+            background: #64433d;
+            box-shadow: 0 0 0 6px rgba(100, 67, 61, 0.2);
+        }
+
+        .tl-entry[data-project="church"].right .tl-card {
+            border-left-color: #64433d;
+        }
+
+        .tl-entry[data-project="church"] .tl-year {
+            color: #64433d;
+            background: rgba(100, 67, 61, 0.08);
+            border-color: rgba(100, 67, 61, 0.2);
+        }
+
+        .tl-entry[data-project="church"] .tl-tag {
+            color: #64433d;
+            background: rgba(100, 67, 61, 0.07);
+            border-color: rgba(100, 67, 61, 0.18);
+        }
+
+        .tl-entry[data-project="church"] .tl-link {
+            color: #64433d;
+        }
+
+        .tl-entry[data-project="aqm"] .tl-dot-inner {
+            border-color: #7aa8c7;
+        }
+
+        .tl-entry[data-project="aqm"]:hover .tl-dot-inner,
+        .tl-entry[data-project="aqm"].active .tl-dot-inner {
+            background: #7aa8c7;
+            box-shadow: 0 0 0 6px rgba(122, 168, 199, 0.2);
+        }
+
+        .tl-entry[data-project="aqm"].left .tl-card {
+            border-right-color: #7aa8c7;
+        }
+
+        .tl-entry[data-project="aqm"] .tl-year {
+            color: #7aa8c7;
+            background: rgba(122, 168, 199, 0.08);
+            border-color: rgba(122, 168, 199, 0.2);
+        }
+
+        .tl-entry[data-project="aqm"] .tl-tag {
+            color: #7aa8c7;
+            background: rgba(122, 168, 199, 0.07);
+            border-color: rgba(122, 168, 199, 0.18);
+        }
+
+        .tl-entry[data-project="aqm"] .tl-link {
+            color: #7aa8c7;
+        }
+
+        .tl-entry[data-project="acidic"] .tl-dot-inner {
+            border-color: #c0392b;
+        }
+
+        .tl-entry[data-project="acidic"]:hover .tl-dot-inner,
+        .tl-entry[data-project="acidic"].active .tl-dot-inner {
+            background: #c0392b;
+            box-shadow: 0 0 0 6px rgba(192, 57, 43, 0.2);
+        }
+
+        .tl-entry[data-project="acidic"].right .tl-card {
+            border-left-color: #c0392b;
+        }
+
+        .tl-entry[data-project="acidic"] .tl-year {
+            color: #c0392b;
+            background: rgba(192, 57, 43, 0.08);
+            border-color: rgba(192, 57, 43, 0.2);
+        }
+
+        .tl-entry[data-project="acidic"] .tl-tag {
+            color: #c0392b;
+            background: rgba(192, 57, 43, 0.07);
+            border-color: rgba(192, 57, 43, 0.18);
+        }
+
+        .tl-entry[data-project="acidic"] .tl-link {
+            color: #c0392b;
+        }
+
+        /* === RESPONSIVE: stack on mobile (handled at 768px above) === */
+
+
+        /* === TOOLS SECTION === */
+        .tools-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tool-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .tool-category h4 {
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .tool-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tool-category li {
+            font-size: 15px;
+            color: var(--text-gray);
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tool-category li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* === PHILOSOPHY SECTION === */
+        .philosophy {
+            background: linear-gradient(135deg, #e8f4f8 0%, #ffffff 100%);
+            border-left: 4px solid var(--accent);
+        }
+
+        .philosophy-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .philosophy-quote {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .philosophy-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* === MARQUEE TESTIMONIALS === */
+        .marquee {
+            --gap: 20px;
+            --duration: 40s;
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            margin: 40px 0;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        @keyframes marquee-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee__track {
+            display: flex;
+            gap: var(--gap);
+            width: max-content;
+            will-change: transform;
+            animation: marquee-scroll var(--duration) linear infinite;
+        }
+
+        .marquee:hover .marquee__track {
+            animation-play-state: paused;
+        }
+
+        .review {
+            font-family: 'Inter', sans-serif;
+            flex: 0 0 auto;
+            min-width: 320px;
+            max-width: 480px;
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px var(--shadow);
+            line-height: 1.6;
+            font-size: 15px;
+            color: var(--text-gray);
+        }
+
+        .review strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .marquee__track {
+                transform: none !important;
+            }
+        }
+
+        /* === WHAT'S NEXT SECTION === */
+        .next-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--text-gray);
+        }
+
+        .goals {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .goals h3 {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .goals-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .goals-list li {
+            font-size: 16px;
+            color: var(--text-gray);
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .goals-list li:last-child {
+            border-bottom: none;
+        }
+
+        .goals-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .closing {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        /* === LINKS === */
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-light);
+            border-bottom-color: var(--accent-light);
+        }
+
+        /* === FOOTER === */
+        footer {
+            max-width: 820px;
+            margin: 60px auto 0;
+            padding: 30px 40px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-text {
+            font-size: 15px;
+            color: var(--text-gray);
+        }
+
+        .footer-note {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-style: italic;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 28px 20px;
+                margin-bottom: 24px;
+            }
+
+            .hero {
+                padding: 36px 20px;
+            }
+
+            .notice-card {
+                padding: 16px 20px;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .review {
+                min-width: 260px;
+                max-width: 360px;
+            }
+
+            /* Collapse timeline to single column at 768px */
+            .timeline-spine {
+                left: 20px;
+            }
+
+            .tl-entry {
+                grid-template-columns: 40px 1fr;
+            }
+
+            .tl-entry.left .tl-content,
+            .tl-entry.right .tl-content {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .tl-entry.left .tl-dot,
+            .tl-entry.right .tl-dot {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .tl-entry.left .tl-empty,
+            .tl-entry.right .tl-empty {
+                display: none;
+            }
+
+            .tl-entry.left .tl-card,
+            .tl-entry.right .tl-card {
+                border-right: 1px solid var(--border);
+                border-left: 4px solid;
+            }
+
+            /* Re-apply per-project accent colors for left border on mobile */
+            .tl-entry[data-project="lava"] .tl-card {
+                border-left-color: #e07b39;
+            }
+
+            .tl-entry[data-project="weather"] .tl-card {
+                border-left-color: #00b4e6;
+            }
+
+            .tl-entry[data-project="mc"] .tl-card {
+                border-left-color: #7c6ad6;
+            }
+
+            .tl-entry[data-project="wdw"] .tl-card {
+                border-left-color: #2ecc71;
+            }
+
+            .tl-entry[data-project="church"] .tl-card {
+                border-left-color: #64433d;
+            }
+
+            .tl-entry[data-project="aqm"] .tl-card {
+                border-left-color: #7aa8c7;
+            }
+
+            .tl-entry[data-project="acidic"] .tl-card {
+                border-left-color: #c0392b;
+            }
+
+            .tl-entry[data-project="chess"] .tl-card {
+                border-left-color: #8e44ad;
+            }
+
+            .tl-entry[data-project="photo"] .tl-card {
+                border-left-color: #e6225d;
+            }
+
+            .tl-entry[data-project="business"] .tl-card {
+                border-left-color: #27ae60;
+            }
+
+            .tl-dot {
+                padding-top: 16px;
+                justify-content: flex-end;
+                padding-right: 8px;
+            }
+        }
+
+        /* === iPad 4th Gen — portrait (768×1024) and landscape (1024×768) === */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            .container {
+                max-width: 720px;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            /* Prevent marquee from causing horizontal overflow */
+            .marquee {
+                max-width: 100vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 16px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* === PRINT STYLES === */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+
+            .marquee {
+                display: none;
+            }
+
+            .notice-card {
+                display: none;
+            }
+
+            a {
+                color: var(--text-dark);
+                border-bottom: 1px solid var(--text-dark);
+            }
+        }
+
+        /* === CREATIVE SECTION === */
+        .creative-block {
+            margin-bottom: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .creative-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .creative-block-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .creative-block-desc {
+            font-size: 15px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .gallery-grid-inline {
+            columns: 3;
+            column-gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 640px) {
+            .gallery-grid-inline {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .gallery-grid-inline {
+                columns: 1;
+            }
+        }
+
+        .music-tracks {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .track-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 10px;
+            padding: 18px 22px;
+        }
+
+        .track-icon {
+            width: 62px;
+            height: 62px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .track-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .track-title {
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .track-meta {
+            font-size: 13px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-gray);
+            margin-top: 4px;
+            letter-spacing: 0.02em;
+        }
+
+        .track-desc {
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--text-gray);
+            margin-top: 10px;
+        }
+
+        .prints-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .print-placeholder {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--card-bg);
+        }
+
+        .print-img-slot {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f0f0eb 0%, #e8e8e3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--text-gray);
+            font-style: italic;
+        }
+
+        .print-label {
+            padding: 10px 14px;
+            color: var(--text-gray);
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+        }
+
+        .business-card {
+            background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .business-desc {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 16px;
+        }
+
+        .business-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .business-tag {
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background: rgba(74, 124, 158, 0.08);
+            border: 1px solid rgba(74, 124, 158, 0.18);
+            color: var(--accent);
+        }
+
+        /* === FRIENDS PHOTO STRIP === */
+        .friends-section {
+            padding-bottom: 28px;
+        }
+
+        .friends-strip {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            padding: 8px 0 14px;
+            /* hide scrollbar but keep scrollable */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .friends-strip::-webkit-scrollbar {
+            display: none;
+        }
+
+        .friends-strip img {
+            height: 220px;
+            width: auto;
+            flex-shrink: 0;
+            border-radius: 10px;
+            object-fit: cover;
+            scroll-snap-align: start;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 10px var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+        }
+
+        .friends-strip img:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+        }
+
+        .friends-hint {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-gray);
+            font-style: italic;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* === GALLERY PAGE SPECIFIC === */
         .gallery-hero {
             text-align: center;
             padding: 50px 40px 30px;
@@ -1174,7 +1516,7 @@ footer {
 
         .gallery-item:hover {
             transform: translateY(-4px) scale(1.01);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
         }
 
         .gallery-item img {
@@ -1210,7 +1552,7 @@ footer {
             max-height: 88vh;
             object-fit: contain;
             border-radius: 10px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
         }
 
         .lightbox-close {
@@ -1244,9 +1586,17 @@ footer {
             font-family: 'Caveat', cursive;
         }
 
-        .lightbox-nav:hover { opacity: 1; }
-        .lightbox-prev { left: 16px; }
-        .lightbox-next { right: 16px; }
+        .lightbox-nav:hover {
+            opacity: 1;
+        }
+
+        .lightbox-prev {
+            left: 16px;
+        }
+
+        .lightbox-next {
+            right: 16px;
+        }
 
         /* === CAPTION AREA === */
         .gallery-note {
@@ -1270,18 +1620,23 @@ footer {
                 columns: 1;
             }
         }
-</style>
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Hero Section -->
     <div class="container hero">
         <h1 class="hero-title">Hello.</h1>
         <h2 class="hero-subtitle">My name is Wilson.</h2>
-        <p class="hero-description">I'm a <span class="highlight">Polymath Technologist</span>, a recently graduated homeschooler heading to college, and someone who believes the best learning happens at the intersection of different domains.</p>
+        <p class="hero-description">I'm a <span class="highlight">Polymath Technologist</span>, a recently graduated
+            homeschooler heading to college, and someone who believes the best learning happens at the intersection of
+            different domains.</p>
         <p class="tagline">Active in: <strong>Coding • Photography • Music • Writing • Chess</strong></p>
     </div>
 
@@ -1289,70 +1644,135 @@ footer {
     <div class="marquee" style="--duration: 60s;">
         <div class="marquee__track">
             <!-- Set 1 -->
-            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for which I am very thankful. <strong>- Luke H.</strong></article>
-            <article class="review">I’ve known Wilson since 2021, and he has grown so much over the years. Wilson was one of the first friends I made at Excelsior, and he has always been the person who would do anything to help someone else. Whether that’s lending a helping hand, listening to what you have to say, or giving an off the wall joke that makes everyone laugh, he has always been there for people. Now as I watch him wrap up his last days of high school, I look back on so many fond memories, and I’m so grateful to have him as friend. Even though we will all miss Wilson when he graduates and there will never be another person like him, I know the Lord will do amazing things with him. I can’t wait to see how he grows even more in his love for the Lord, his drive to help others, and his ability to make an impact in peoples lives like he did in mine. <strong>— Vera K.</strong></article>
-            <article class="review">Wilson Ligon is someone who leads in sincerity, intentionality, and a strong sense of faith. Through his careful observation and kind heart, Wilson brings overwhelming positivity into every room he enters. He has a rare ability to recognize heaviness and counteract it with joy. In small gestures and genuine attention, his friendly presence makes those around him feel seen and understood. His empathy is steady, unassuming, and powerfully influential — a wonderful reflection of his devotion to the Lord. And his humor — it brings about laughter that lingers long after the moment passes, sparking an undeniable, enduring warmth. I am incredibly appreciative of Wilson’s friendship and inspired by the gentle consistency of his faith. <strong>— Lauren Tenhet</strong></article>
-            <article class="review">I've had the honor of knowing Wilson since starting Excelsior, and throughout school and daily life, he has never failed to show genuine compassion, boldness, and brotherly love; he is as kind to a stranger as he is to a close friend.
-            Wilson's heart for Christ has not only been such a blessing, but an example as well. I'm excited to see how the Lord will continue to grow him for His glory and Wilson's good.<strong>— Abby McConnell</strong></article>
-            <article class="review">I have been using this product since the 2021 model released, and I have to say, like fine wine, it only gets better with age. Highly recommend for anyone in college looking for a reliable friend! 8/10. <strong>— Brodie Holt</strong></article>
+            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He
+                never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with
+                his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for
+                which I am very thankful. <strong>- Luke H.</strong></article>
+            <article class="review">I’ve known Wilson since 2021, and he has grown so much over the years. Wilson was
+                one of the first friends I made at Excelsior, and he has always been the person who would do anything to
+                help someone else. Whether that’s lending a helping hand, listening to what you have to say, or giving
+                an off the wall joke that makes everyone laugh, he has always been there for people. Now as I watch him
+                wrap up his last days of high school, I look back on so many fond memories, and I’m so grateful to have
+                him as friend. Even though we will all miss Wilson when he graduates and there will never be another
+                person like him, I know the Lord will do amazing things with him. I can’t wait to see how he grows even
+                more in his love for the Lord, his drive to help others, and his ability to make an impact in peoples
+                lives like he did in mine. <strong>— Vera K.</strong></article>
+            <article class="review">Wilson Ligon is someone who leads in sincerity, intentionality, and a strong sense
+                of faith. Through his careful observation and kind heart, Wilson brings overwhelming positivity into
+                every room he enters. He has a rare ability to recognize heaviness and counteract it with joy. In small
+                gestures and genuine attention, his friendly presence makes those around him feel seen and understood.
+                His empathy is steady, unassuming, and powerfully influential — a wonderful reflection of his devotion
+                to the Lord. And his humor — it brings about laughter that lingers long after the moment passes,
+                sparking an undeniable, enduring warmth. I am incredibly appreciative of Wilson’s friendship and
+                inspired by the gentle consistency of his faith. <strong>— Lauren Tenhet</strong></article>
+            <article class="review">I've had the honor of knowing Wilson since starting Excelsior, and throughout school
+                and daily life, he has never failed to show genuine compassion, boldness, and brotherly love; he is as
+                kind to a stranger as he is to a close friend.
+                Wilson's heart for Christ has not only been such a blessing, but an example as well. I'm excited to see
+                how the Lord will continue to grow him for His glory and Wilson's good.<strong>— Abby McConnell</strong>
+            </article>
+            <article class="review">I have been using this product since the 2021 model released, and I have to say,
+                like fine wine, it only gets better with age. Highly recommend for anyone in college looking for a
+                reliable friend! 8/10. <strong>— Brodie Holt</strong></article>
             <!-- Set 2 — duplicate for seamless loop -->
-            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for which I am very thankful. <strong>- Luke H.</strong></article>
-            <article class="review">I’ve known Wilson since 2021, and he has grown so much over the years. Wilson was one of the first friends I made at Excelsior, and he has always been the person who would do anything to help someone else. Whether that’s lending a helping hand, listening to what you have to say, or giving an off the wall joke that makes everyone laugh, he has always been there for people. Now as I watch him wrap up his last days of high school, I look back on so many fond memories, and I’m so grateful to have him as friend. Even though we will all miss Wilson when he graduates and there will never be another person like him, I know the Lord will do amazing things with him. I can’t wait to see how he grows even more in his love for the Lord, his drive to help others, and his ability to make an impact in peoples lives like he did in mine. <strong>— Vera K.</strong></article>
-            <article class="review">Wilson Ligon is someone who leads in sincerity, intentionality, and a strong sense of faith. Through his careful observation and kind heart, Wilson brings overwhelming positivity into every room he enters. He has a rare ability to recognize heaviness and counteract it with joy. In small gestures and genuine attention, his friendly presence makes those around him feel seen and understood. His empathy is steady, unassuming, and powerfully influential — a wonderful reflection of his devotion to the Lord. And his humor — it brings about laughter that lingers long after the moment passes, sparking an undeniable, enduring warmth. I am incredibly appreciative of Wilson’s friendship and inspired by the gentle consistency of his faith. <strong>— Lauren Tenhet</strong></article>
-            <article class="review">I've had the honor of knowing Wilson since starting Excelsior, and throughout school and daily life, he has never failed to show genuine compassion, boldness, and brotherly love; he is as kind to a stranger as he is to a close friend.
-            Wilson's heart for Christ has not only been such a blessing, but an example as well. I'm excited to see how the Lord will continue to grow him for His glory and Wilson's good.<strong>— Abby McConnell</strong></article>
-            <article class="review">I have been using this product since the 2021 model released, and I have to say, like fine wine, it only gets better with age. Highly recommend for anyone in college looking for a reliable friend! 8/10. <strong>— Brodie Holt</strong></article>
+            <article class="review">Wilson has always been an example of compassion, creativity, and a love of God. He
+                never hesitates to make friends or to share the love of the Lord. He inspires everyone around him with
+                his skills as a musician and as an aspiring 3D artist. Wilson has been my friend for many years, for
+                which I am very thankful. <strong>- Luke H.</strong></article>
+            <article class="review">I’ve known Wilson since 2021, and he has grown so much over the years. Wilson was
+                one of the first friends I made at Excelsior, and he has always been the person who would do anything to
+                help someone else. Whether that’s lending a helping hand, listening to what you have to say, or giving
+                an off the wall joke that makes everyone laugh, he has always been there for people. Now as I watch him
+                wrap up his last days of high school, I look back on so many fond memories, and I’m so grateful to have
+                him as friend. Even though we will all miss Wilson when he graduates and there will never be another
+                person like him, I know the Lord will do amazing things with him. I can’t wait to see how he grows even
+                more in his love for the Lord, his drive to help others, and his ability to make an impact in peoples
+                lives like he did in mine. <strong>— Vera K.</strong></article>
+            <article class="review">Wilson Ligon is someone who leads in sincerity, intentionality, and a strong sense
+                of faith. Through his careful observation and kind heart, Wilson brings overwhelming positivity into
+                every room he enters. He has a rare ability to recognize heaviness and counteract it with joy. In small
+                gestures and genuine attention, his friendly presence makes those around him feel seen and understood.
+                His empathy is steady, unassuming, and powerfully influential — a wonderful reflection of his devotion
+                to the Lord. And his humor — it brings about laughter that lingers long after the moment passes,
+                sparking an undeniable, enduring warmth. I am incredibly appreciative of Wilson’s friendship and
+                inspired by the gentle consistency of his faith. <strong>— Lauren Tenhet</strong></article>
+            <article class="review">I've had the honor of knowing Wilson since starting Excelsior, and throughout school
+                and daily life, he has never failed to show genuine compassion, boldness, and brotherly love; he is as
+                kind to a stranger as he is to a close friend.
+                Wilson's heart for Christ has not only been such a blessing, but an example as well. I'm excited to see
+                how the Lord will continue to grow him for His glory and Wilson's good.<strong>— Abby McConnell</strong>
+            </article>
+            <article class="review">I have been using this product since the 2021 model released, and I have to say,
+                like fine wine, it only gets better with age. Highly recommend for anyone in college looking for a
+                reliable friend! 8/10. <strong>— Brodie Holt</strong></article>
         </div>
     </div>
 
 
     <!-- About Section -->
     <div class="container">
-        <h1 class="section-title">About Me</h1>
+        <h2 class="section-title">About Me</h2>
 
         <div class="about-block">
             <h2 class="question">Who Am I?</h2>
-            <p class="answer">I'm Wilson - a graduated homeschool soon to be college student with plans to study IT Networking and Cybersecurity at ICC. I love being active across my many hobbies, connecting with friends, and exploring new skills. Most importantly, I believe in Jesus Christ as my Lord and Savior, and I love sharing His gospel truth and studying scripture.</p>
+            <p class="answer">I'm Wilson - a graduated homeschool soon to be college student with plans to study IT
+                Networking and Cybersecurity at ICC. I love being active across my many hobbies, connecting with
+                friends, and exploring new skills. Most importantly, I believe in Jesus Christ as my Lord and Savior,
+                and I love sharing His gospel truth and studying scripture.</p>
         </div>
 
         <div class="about-block">
             <h2 class="question">What Do I Do?</h2>
-            <p class="answer">I code Web Dev applications, shoot photography and video with my Canon 80D, produce music (bass player + multi-instrumentalist), manage a homelab with Proxmox servers, play chess with the intent to become a FM (FIDE Master), and write both technical documentation and creative content. I'm always learning new skills and applying it to better benefit not only myself, but the community around me.</p>
+            <p class="answer">I code Web Dev applications, shoot photography and video with my Canon 80D, produce music
+                (bass player + multi-instrumentalist), manage a homelab with Proxmox servers, play chess with the intent
+                to become a FM (FIDE Master), and write both technical documentation and creative content. I'm always
+                learning new skills and applying it to better benefit not only myself, but the community around me.</p>
         </div>
 
         <div class="about-block">
             <h2 class="question">Why Do I Do It?</h2>
-            <p class="answer">Life is about growth, exploration, and sharing the Gospel of Jesus Christ - our Lord and Savior who died for our sins and rose from the dead three days later. By engaging across diverse activities, I expand my horizons, challenge myself, and find joy in the process of creation. Polymaths don't just know a lot - they see the patterns between disciplines.</p>
+            <p class="answer">Life is about growth, exploration, and sharing the Gospel of Jesus Christ - our Lord and
+                Savior who died for our sins and rose from the dead three days later. By engaging across diverse
+                activities, I expand my horizons, challenge myself, and find joy in the process of creation. Polymaths
+                don't just know a lot - they see the patterns between disciplines.</p>
         </div>
 
         <div class="about-block">
             <h2 class="question">What's My Faith Background?</h2>
-            <p class="answer">I believe in the Father, Son, and Holy Spirit - that Jesus Christ is our Lord and Savior, fully God and fully man, born of a virgin, who died for our sins and rose from the grave three days later. I attend <a href="https://cornersvillecc.com" target="_blank">Cornersville Community Church</a>.</p>
+            <p class="answer">I believe in the Father, Son, and Holy Spirit - that Jesus Christ is our Lord and Savior,
+                fully God and fully man, born of a virgin, who died for our sins and rose from the grave three days
+                later. I attend <a href="https://cornersvillecc.com" target="_blank">Cornersville Community Church</a>.
+            </p>
         </div>
     </div>
 
     <!-- What I Make -->
     <div class="container creative-section">
-        <h1 class="section-title">What I Make</h1>
+        <h2 class="section-title">What I Make</h2>
         <p class="section-intro">Beyond the screen — photography, music, physical objects, and a business.</p>
 
         <!-- Photography -->
         <div class="creative-block">
             <h2 class="creative-block-title">Photography</h2>
-            <p class="creative-block-desc">I take pictures and videos on Canon 80D. Some edited, some not — all mine. I Learned from my mother, a professional photographer. Check out some of my most proud ones <a href="gallery.html" target="_blank">here.</a></p>
+            <p class="creative-block-desc">I take pictures and videos on Canon 80D. Some edited, some not — all mine. I
+                Learned from my mother, a professional photographer. Check out some of my most proud ones <a
+                    href="gallery.html" target="_blank">here.</a></p>
         </div>
 
         <!-- Music -->
         <div class="creative-block">
             <h2 class="creative-block-title">Music</h2>
-            <p class="creative-block-desc">Bass player and multi-instrumentalist. Guitar since 2022, digital production since 2024. Two tracks I'm proud of:</p>
+            <p class="creative-block-desc">Bass player and multi-instrumentalist. Guitar since 2022, digital production
+                since 2024. Two tracks I'm proud of:</p>
             <div class="music-tracks">
                 <div class="track-card">
                     <div class="track-icon"><img src="/music/AQM.JPG" alt="A Quiet Midnight cover"></div>
                     <div class="track-info">
                         <div class="track-title">A Quiet Midnight</div>
                         <div class="track-meta">Ambient · Instrumental · 2024</div>
-                        <p class="track-desc">A late-night piece built around piano-bell layers and slow-moving pads. Written during a period of peace; No expectation, no time constrant, just me, my iPad and a vision.</p>
+                        <p class="track-desc">A late-night piece built around piano-bell layers and slow-moving pads.
+                            Written during a period of peace; No expectation, no time constrant, just me, my iPad and a
+                            vision.</p>
                     </div>
                 </div>
                 <div class="track-card">
@@ -1360,7 +1780,8 @@ footer {
                     <div class="track-info">
                         <div class="track-title">Acidic Memories</div>
                         <div class="track-meta">Hard Rock · Experimental · 2025</div>
-                        <p class="track-desc">A more textured, distorted experiment; bass-heavy production with unique percussion and an powerhouse of strings and winds.</p>
+                        <p class="track-desc">A more textured, distorted experiment; bass-heavy production with unique
+                            percussion and an powerhouse of strings and winds.</p>
                     </div>
                 </div>
             </div>
@@ -1371,14 +1792,28 @@ footer {
         <!-- 3D Printing -->
         <div class="creative-block">
             <h2 class="creative-block-title">3D Printing</h2>
-            <p class="creative-block-desc">Bambu Labs A1 Multi-Color. Functional prints, creative experiments, and the occasional thing I actually needed.</p>
+            <p class="creative-block-desc">Bambu Labs A1 Multi-Color. Functional prints, creative experiments, and the
+                occasional thing I actually needed.</p>
+        </div>
+
+        <!-- Chess -->
+        <div class="creative-block">
+            <h2 class="creative-block-title">Chess</h2>
+            <p class="creative-block-desc">I play chess competitively and online. I have a chess.com rating of 300+ and
+                am working toward becoming a FIDE Master (FM). I want to start playing in touraments by 2027 and, most
+                importantly, have fun along the way. Track my progress on my chess.com, feel free to challenge me also:
+                <a href="https://www.chess.com/member/wlygon7">My Chess.com Profile</a>
+            </p>
         </div>
 
         <!-- Business -->
         <div class="creative-block">
             <h2 class="creative-block-title">Willy's Laundry Rentals LLC</h2>
             <div class="business-card">
-                <p class="business-desc">A small business I founded providing laundry equipment rental services in Mississippi. Running a real LLC as a high schooler is teaching me more about operations, customer relationships, and financial systems than any class could.</p>
+                <p class="business-desc">A small business I founded providing laundry equipment rental services in
+                    Mississippi. Running a real LLC as a high schooler is teaching me more about operations,
+                    customer
+                    relationships, and financial systems than any class could.</p>
                 <a href="https://willyslaundry.com" target="_blank">Website</a> <br>
                 <a href="https://www.facebook.com/WillyLaundryLLC" target="_blank">Facebook</a> <br>
                 <div class="business-meta">
@@ -1390,20 +1825,60 @@ footer {
         </div>
     </div>
     <div class="container timeline-section">
-        <h1 class="section-title">What I've Shipped</h1>
-        <p class="section-intro">A living timeline of published projects — click any card to learn more.</p>
+        <h2 class="section-title">The Work</h2>
+        <p class="section-intro">A living timeline across domains — click any card to learn more.</p>
 
         <div class="timeline-spine"></div>
 
         <div class="timeline-entries">
 
-            <!-- 1. Lava Lamp — LEFT -->
-            <div class="tl-entry left" data-project="lava" onclick="toggleTimeline(this)">
+            <!-- 1. Photography — LEFT (2023–) -->
+            <div class="tl-entry left" data-project="photo" onclick="toggleTimeline(this)">
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2023–</span>
+                        <div class="tl-title">Photography</div>
+                        <p class="tl-desc">Shooting with a Canon 80D. Portraits, landscapes, candids. Learned from
+                            my
+                            mother — a professional photographer. Always shooting, always editing.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Canon 80D</span>
+                            <span class="tl-tag">Portrait</span>
+                            <span class="tl-tag">Landscape</span>
+                            <span class="tl-tag">Premiere Pro</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Learning photography from a professional means learning the eye before the
+                                    settings.
+                                    The 80D isn't the newest camera, but it's the one I've grown with — and the one
+                                    I
+                                    trust. Most of what I know about light, framing, and patience came from watching
+                                    my
+                                    mom work before I ever picked it up myself.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="gallery.html" onclick="event.stopPropagation()">View Gallery</a>
+                    </div>
+                </div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-empty"></div>
+            </div>
+
+            <!-- 2. Lava Lamp — RIGHT -->
+            <div class="tl-entry right" data-project="lava" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2024</span>
                         <div class="tl-title">Lava Lamp Simulator</div>
-                        <p class="tl-desc">A fully interactive CSS + JS lava lamp with animated blobs, a live color picker, and a bubble burst mode. Pure frontend — no frameworks, no libraries.</p>
+                        <p class="tl-desc">A fully interactive CSS + JS lava lamp with animated blobs, a live color
+                            picker, and a bubble burst mode. Pure frontend — no frameworks, no libraries.</p>
                         <div class="tl-tags">
                             <span class="tl-tag">HTML</span>
                             <span class="tl-tag">CSS</span>
@@ -1412,25 +1887,27 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>An exercise in pure CSS physics — each blob uses keyframe animations with randomized timing functions to mimic convection. Taught me how far CSS alone can go before you actually need JavaScript.</p>
+                                <p>An exercise in pure CSS physics — each blob uses keyframe animations with
+                                    randomized
+                                    timing functions to mimic convection. Taught me how far CSS alone can go before
+                                    you
+                                    actually need JavaScript.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://lava.lygonms.com" target="_blank" onclick="event.stopPropagation()">lava.lygonms.com</a>
+                        <a class="tl-link" href="https://lava.lygonms.com" target="_blank"
+                            onclick="event.stopPropagation()">lava.lygonms.com</a>
                     </div>
                 </div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-                <div class="tl-empty"></div>
             </div>
 
-            <!-- 2. A Quiet Midnight — RIGHT -->
-            <div class="tl-entry right" data-project="aqm" onclick="toggleTimeline(this)">
-                <div class="tl-empty"></div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <!-- 3. A Quiet Midnight — LEFT -->
+            <div class="tl-entry left" data-project="aqm" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2024</span>
                         <div class="tl-title">A Quiet Midnight</div>
-                        <p class="tl-desc">A late-night ambient piece built around piano-bell layers and slow-moving pads. My first finished produced track.</p>
+                        <p class="tl-desc">A late-night ambient piece built around piano-bell layers and slow-moving
+                            pads. My first finished produced track.</p>
                         <div class="tl-tags">
                             <span class="tl-tag">Ambient</span>
                             <span class="tl-tag">Instrumental</span>
@@ -1439,21 +1916,64 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>Written during a period of peace — just me, my overheating iPad, and a vision (ish). Proof that ambient music is deceptively hard to make feel right.</p>
+                                <p>Written during a period of peace — just me, my overheating iPad, and a vision
+                                    (ish).
+                                </p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/a-quiet-midnight" target="_blank" onclick="event.stopPropagation()">soundcloud.com</a>
+                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/a-quiet-midnight" target="_blank"
+                            onclick="event.stopPropagation()">soundcloud.com</a>
+                    </div>
+                </div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-empty"></div>
+            </div>
+
+            <!-- 4. Willy's Laundry Rentals — RIGHT -->
+            <div class="tl-entry right" data-project="business" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2026</span>
+                        <div class="tl-title">Willy's Laundry Rentals LLC</div>
+                        <p class="tl-desc">Founded and launched a laundry equipment rental business in Mississippi.
+                            LLC
+                            formation, website, Facebook presence, and ongoing operations — all before graduating
+                            high
+                            school.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">LLC</span>
+                            <span class="tl-tag">Operations</span>
+                            <span class="tl-tag">Mississippi</span>
+                            <span class="tl-tag">Self-Founded</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Starting a real business as a high schooler meant learning operations, customer
+                                    relationships, and financial systems faster than any class could teach me. No
+                                    templates, no training wheels — just figure it out. Still running.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://willyslaundry.com" target="_blank"
+                            onclick="event.stopPropagation()">willyslaundry.com</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. Weather Dashboard — LEFT -->
+            <!-- 5. Weather Dashboard — LEFT -->
             <div class="tl-entry left" data-project="weather" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2025</span>
                         <div class="tl-title">Weather Dashboard</div>
-                        <p class="tl-desc">Live weather data visualized in a dark glassmorphism UI with glowing cyan accents. Supports location search, multi-day forecasts, and animated data transitions.</p>
+                        <p class="tl-desc">Live weather data visualized in a dark glassmorphism UI with glowing cyan
+                            accents. Supports location search, multi-day forecasts, and animated data transitions.
+                        </p>
                         <div class="tl-tags">
                             <span class="tl-tag">HTML/CSS/JS</span>
                             <span class="tl-tag">Weather API</span>
@@ -1462,25 +1982,35 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>My first serious data dashboard — introduced me to API integration, async JS, and designing for dark UIs. The glowing neon-on-black aesthetic pushed me toward what became my signature style.</p>
+                                <p>My first serious data dashboard — introduced me to API integration, async JS, and
+                                    designing for dark UIs. The glowing neon-on-black aesthetic pushed me toward
+                                    what
+                                    became my signature style.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://weather.lygonms.com" target="_blank" onclick="event.stopPropagation()">weather.lygonms.com</a>
+                        <a class="tl-link" href="https://weather.lygonms.com" target="_blank"
+                            onclick="event.stopPropagation()">weather.lygonms.com</a>
                     </div>
                 </div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 4. Acidic Memories — RIGHT -->
+            <!-- 6. Acidic Memories — RIGHT -->
             <div class="tl-entry right" data-project="acidic" onclick="toggleTimeline(this)">
                 <div class="tl-empty"></div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2025</span>
                         <div class="tl-title">Acidic Memories</div>
-                        <p class="tl-desc">A bass-heavy, distorted experiment with unique percussion and a powerhouse of strings and winds.</p>
+                        <p class="tl-desc">A bass-heavy, distorted experiment with unique percussion and a
+                            powerhouse of
+                            strings and winds.</p>
                         <div class="tl-tags">
                             <span class="tl-tag">Hard Rock</span>
                             <span class="tl-tag">Experimental</span>
@@ -1489,21 +2019,27 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>A more textured, edgier direction than anything prior — deliberately layered and heavy, blending hard rock energy with experimental production that pushed what I knew about arrangement.</p>
+                                <p>A more textured, edgier direction than anything prior — deliberately layered and
+                                    heavy, blending hard rock energy with experimental production that pushed what I
+                                    knew about arrangement.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/stuck-in-my-lucid-mind" target="_blank" onclick="event.stopPropagation()">soundcloud.com</a>
+                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/stuck-in-my-lucid-mind"
+                            target="_blank" onclick="event.stopPropagation()">soundcloud.com</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 5. MonitorCraft — LEFT -->
+            <!-- 7. MonitorCraft — LEFT -->
             <div class="tl-entry left" data-project="mc" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2025</span>
                         <div class="tl-title">MonitorCraft</div>
-                        <p class="tl-desc">A full-stack Minecraft server uptime monitoring app with real user authentication, persistent data, and a production-grade React + Vite frontend. My first app with a real login system.</p>
+                        <p class="tl-desc">A full-stack Minecraft server uptime monitoring app with real user
+                            authentication, persistent data, and a production-grade React + Vite frontend. My first
+                            app
+                            with a real login system.</p>
                         <div class="tl-tags">
                             <span class="tl-tag">React</span>
                             <span class="tl-tag">Vite</span>
@@ -1513,25 +2049,65 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>The biggest architectural leap I'd taken — moved from static sites into a real SPA with Firebase auth and a live database. Learned the hard way about state management and protected routes.</p>
+                                <p>The biggest architectural leap I'd taken — moved from static sites into a real
+                                    SPA
+                                    with Firebase auth and a live database. Learned the hard way about state
+                                    management
+                                    and protected routes.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://mc.lygonms.com" target="_blank" onclick="event.stopPropagation()">mc.lygonms.com</a>
+                        <a class="tl-link" href="https://mc.lygonms.com" target="_blank"
+                            onclick="event.stopPropagation()">mc.lygonms.com</a>
                     </div>
                 </div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 6. WDW Wait Times — RIGHT -->
-            <div class="tl-entry right" data-project="wdw" onclick="toggleTimeline(this)">
+            <!-- 8. OTB Chess — RIGHT -->
+            <div class="tl-entry right" data-project="chess" onclick="toggleTimeline(this)">
                 <div class="tl-empty"></div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-content">
                     <div class="tl-card">
-                        <span class="tl-year">2025-2026</span>
+                        <span class="tl-year">2026–</span>
+                        <div class="tl-title">OTB Chess — Mulligan Club</div>
+                        <p class="tl-desc">Joined the Mulligan Chess Club in Tupelo, MS and entered rated
+                            over-the-board
+                            play. Pursuing USCF and FIDE ratings with a long-term goal of FIDE Master.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">OTB Chess</span>
+                            <span class="tl-tag">USCF</span>
+                            <span class="tl-tag">Caro-Kann</span>
+                            <span class="tl-tag">Scotch Four Knights</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Chess is the one domain where being wrong costs you immediately and publicly.
+                                    Studying openings, playing rated games, and building a long-term plan toward FM
+                                    —
+                                    it's the most honest feedback loop I've found in any discipline.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://www.chess.com/member/wlygon7" target="_blank"
+                            onclick="event.stopPropagation()">chess.com/wlygon7</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. WDW Wait Times — LEFT -->
+            <div class="tl-entry left" data-project="wdw" onclick="toggleTimeline(this)">
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2025–2026</span>
                         <div class="tl-title">WDW Wait Times as a Stock Market</div>
-                        <p class="tl-desc">Walt Disney World ride wait times reimagined as a live stock ticker. Line charts, real-time polling, park selectors, and a disney inspired UI over a textured sky.</p>
+                        <p class="tl-desc">Walt Disney World ride wait times reimagined as a live stock ticker. Line
+                            charts, real-time polling, park selectors, and a Disney-inspired UI over a textured sky.
+                        </p>
                         <div class="tl-tags">
                             <span class="tl-tag">React</span>
                             <span class="tl-tag">Chart.js</span>
@@ -1540,21 +2116,41 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>The concept came from two sources. One: my interest in market structure — if wait times rise and fall like a market, why not display them like one? And two: I was three weeks away from boarding a plane that would take me and my then girlfriend (alongside her sister and sister's boyfriend) to Disney. It was not only my first time flying in over 10 years, but the first time I went to Disney (or anywhere across several states) without my parents. This project became my most technically complex frontend project to date, and I finished it 6 hours before boarding.</p>
+                                <p>The concept came from two sources. One: my interest in market structure — if wait
+                                    times rise and fall like a market, why not display them like one? And two: I was
+                                    three weeks away from boarding a plane that would take me and my then girlfriend
+                                    (alongside her sister and sister's boyfriend) to Disney. It was not only my
+                                    first
+                                    time flying in over 10 years, but the first time I went to Disney (or anywhere
+                                    across several states) without my parents. This project became my most
+                                    technically
+                                    complex frontend project to date, and I finished it 6 hours before boarding.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://wdwtimes.lygonms.com" target="_blank" onclick="event.stopPropagation()">wdwtimes.lygonms.com</a>
+                        <a class="tl-link" href="https://wdwtimes.lygonms.com" target="_blank"
+                            onclick="event.stopPropagation()">wdwtimes.lygonms.com</a>
                     </div>
                 </div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-empty"></div>
             </div>
 
-            <!-- 7. Cornersville Community Church — LEFT -->
-            <div class="tl-entry left" data-project="church" onclick="toggleTimeline(this)">
+            <!-- 10. Cornersville Community Church — RIGHT -->
+            <div class="tl-entry right" data-project="church" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2026</span>
                         <div class="tl-title">Cornersville Community Church</div>
-                        <p class="tl-desc">Built and deployed the production website for Cornersville Community Church — domain, DNS, hosting, Google Workspace, and Givelify donation integration. Alongside designer and fellow senior Lauren Tenhet.</p>
+                        <p class="tl-desc">Built and deployed the production website for Cornersville Community
+                            Church —
+                            domain, DNS, hosting, Google Workspace, and Givelify donation integration. Alongside
+                            designer and fellow senior Lauren Tenhet.</p>
                         <div class="tl-tags">
                             <span class="tl-tag">DNS / Hosting</span>
                             <span class="tl-tag">Google Workspace</span>
@@ -1562,81 +2158,64 @@ footer {
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
-                                <p>My first production client project. Lauren, a fellow senior graduate and close friend of mine, handled all design and content; I handled the entire technical stack — registrar, DNS routing, hosting config, staff email provisioning, and online giving setup.</p>
+                                <p>My first production client project. Lauren handled all design and content; I
+                                    handled
+                                    the entire technical stack — registrar, DNS routing, hosting config, staff email
+                                    provisioning, and online giving setup.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://cornersvillecc.com" target="_blank" onclick="event.stopPropagation()">cornersvillecc.com</a>
+                        <a class="tl-link" href="https://cornersvillecc.com" target="_blank"
+                            onclick="event.stopPropagation()">cornersvillecc.com</a>
                     </div>
                 </div>
-                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-                <div class="tl-empty"></div>
             </div>
 
         </div><!-- /.timeline-entries -->
-    </div><!-- /.container timeline-section -->
+    </div><!-- /.timeline-section -->
 
     <!-- Tools Section -->
     <div class="container tools-section">
-        <h1 class="section-title">How I Work</h1>
+        <h2 class="section-title">How I Work</h2>
         <p class="section-intro">The toolbelt I equip daily to help me in my day to day life:</p>
 
         <div class="tools-grid">
             <div class="tool-category">
-                <h4>Web Development</h4>
+                <h4>Technology</h4>
                 <ul>
-                    <li>HTML, CSS</li>
-                    <li>Currently self teaching JS/TS</li>
-                    <li>React and Vue</li>
-                    <li>Git & GitHub</li>
+                    <li>HTML, CSS, JS/TS, React, Vue</li>
+                    <li>Proxmox, Docker, self-hosted services</li>
+                    <li>Cloudflare, DNS, networking</li>
+                    <li>Git, Neovim, Linux</li>
                 </ul>
             </div>
 
             <div class="tool-category">
-                <h4>Systems & Infrastructure</h4>
+                <h4>Music & Audio</h4>
                 <ul>
-                    <li>Proxmox virtualization</li>
-                    <li>Docker & containers</li>
-                    <li>Self Hosted Services (Adguard, Immich, Gitea, Nextcloud)</li>
-                    <li>VPN (Netbird)</li>
-                </ul>
-            </div>
-
-            <div class="tool-category">
-                <h4>Audio Production</h4>
-                <ul>
+                    <li>Yamaha BB435 (main bass)</li>
+                    <li>Guitar, multi-instrumentalist</li>
                     <li>GarageBand / Logic Studio</li>
-                    <li>Audacity</li>
-                    <li>Multi-track recording</li>
-                    <li>Mixing & mastering</li>
+                    <li>Audiobox USB96 · Mixing & mastering</li>
                 </ul>
             </div>
 
             <div class="tool-category">
-                <h4>Creative Production</h4>
+                <h4>Visual Arts</h4>
                 <ul>
-                    <li>Neovim</li>
+                    <li>Canon 80D + lenses</li>
                     <li>Adobe Premiere Pro</li>
-                    <li>Blender (3D)</li>
-                    <li>Canon 80D + Lenses</li>
+                    <li>Blender (3D modeling)</li>
+                    <li>Bambu Labs A1 Multi-Color (3D printing)</li>
                 </ul>
             </div>
 
             <div class="tool-category">
-                <h4>Hardware</h4>
+                <h4>Chess</h4>
                 <ul>
-                    <li>Main PC: Sirius - 64gb RAM, Nvidia 3060 RTX GeForce, ASRock B550 Phantom Gaming</li>
-                    <li>Proxmox PC: Vega - 2014 Optiplex 9020 with 32gb RAM and 1TB Storage</li>
-                    <li>Bambu Labs A1 Multi-Color 3D Printer</li>
-                    <li>Main Bass: Yamaha BB435</li>
-                </ul>
-            </div>
-
-            <div class="tool-category">
-                <h4>Currently Exploring</h4>
-                <ul>
-                    <li>Mathematics</li>
-                    <li>Russian</li>
-                    <li>Neuroscience</li>
+                    <li>OTB play — Mulligan Chess Club, MS</li>
+                    <li>USCF rated · pursuing FIDE</li>
+                    <li>Caro-Kann (Black) · Scotch Four Knights (White)</li>
+                    <li>Long-term goal: FIDE Master</li>
                 </ul>
             </div>
         </div>
@@ -1646,14 +2225,23 @@ footer {
     <div class="container philosophy">
         <h2 class="philosophy-title">Operating Philosophy</h2>
         <p class="philosophy-quote">"Messiness by Design"</p>
-        <p class="philosophy-text">Life resists neat containers. I embrace organized chaos - systems that allow for emergence rather than enforcing rigidity. Using a loose Zettelkasten methodology: <em>"If it's important, it floats back to the surface."</em></p>
-        <p class="philosophy-text">Whether it's theology, technology, or creative work - understanding the underlying patterns and connections is what creates mastery. I'm a systems thinker who tries (unsuccessfully) not to start three new hobbies each week.</p>
+        <p class="philosophy-text">Life resists neat containers. I embrace organized chaos - systems that allow for
+            emergence rather than enforcing rigidity. Using a loose Zettelkasten methodology: <em>"If it's
+                important, it
+                floats back to the surface."</em></p>
+        <p class="philosophy-text">Whether it's theology, technology, or creative work - understanding the
+            underlying
+            patterns and connections is what creates mastery. I'm a systems thinker who tries (unsuccessfully) not
+            to
+            start three new hobbies each week.</p>
     </div>
 
     <!-- What's Next -->
     <div class="container">
-        <h1 class="section-title">What's Next</h1>
-        <p class="next-intro">This isn't the end of formal education - it's the formalization of what I've been doing all along: building, learning, and connecting disciplines that don't usually talk to each other.</p>
+        <h2 class="section-title">What's Next</h2>
+        <p class="next-intro">This isn't the end of formal education - it's the formalization of what I've been
+            doing
+            all along: building, learning, and connecting disciplines that don't usually talk to each other.</p>
 
         <div class="goals">
             <h3>Immediate Goals:</h3>
@@ -1665,15 +2253,9 @@ footer {
             </ul>
         </div>
 
-        <p class="closing">I'm looking for opportunities that value depth over specialization, curiosity over credentials, and the ability to see connections others miss. The future is more friendships, deeper AI integration, expanded creative work, and continued exploration.</p>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
-        <span class="lightbox-close" onclick="closeLightbox()">✕</span>
-        <span class="lightbox-nav lightbox-prev" onclick="changePhoto(-1)">‹</span>
-        <img id="lightboxImg" src="" alt="">
-        <span class="lightbox-nav lightbox-next" onclick="changePhoto(1)">›</span>
+        <p class="closing">I'm looking for opportunities that value depth over specialization, curiosity over
+            credentials, and the ability to see connections others miss. The future is more friendships, deeper AI
+            integration, expanded creative work, and continued exploration.</p>
     </div>
 
     <!-- Footer -->
@@ -1693,4 +2275,5 @@ footer {
     </script>
 
 </body>
+
 </html>
