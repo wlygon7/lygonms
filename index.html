@@ -519,6 +519,22 @@ h1, h2, h3, .hero-title, .section-title, .question {
   .tl-entry[data-project="church"] .tl-year { color: #64433d; background: rgba(100,67,61,0.08); border-color: rgba(100,67,61,0.2); }
   .tl-entry[data-project="church"] .tl-tag { color: #64433d; background: rgba(100,67,61,0.07); border-color: rgba(100,67,61,0.18); }
   .tl-entry[data-project="church"] .tl-link { color: #64433d; }
+
+  .tl-entry[data-project="aqm"] .tl-dot-inner { border-color: #7aa8c7; }
+  .tl-entry[data-project="aqm"]:hover .tl-dot-inner,
+  .tl-entry[data-project="aqm"].active .tl-dot-inner { background: #7aa8c7; box-shadow: 0 0 0 6px rgba(122,168,199,0.2); }
+  .tl-entry[data-project="aqm"].right .tl-card { border-left-color: #7aa8c7; }
+  .tl-entry[data-project="aqm"] .tl-year { color: #7aa8c7; background: rgba(122,168,199,0.08); border-color: rgba(122,168,199,0.2); }
+  .tl-entry[data-project="aqm"] .tl-tag { color: #7aa8c7; background: rgba(122,168,199,0.07); border-color: rgba(122,168,199,0.18); }
+  .tl-entry[data-project="aqm"] .tl-link { color: #7aa8c7; }
+
+  .tl-entry[data-project="acidic"] .tl-dot-inner { border-color: #c0392b; }
+  .tl-entry[data-project="acidic"]:hover .tl-dot-inner,
+  .tl-entry[data-project="acidic"].active .tl-dot-inner { background: #c0392b; box-shadow: 0 0 0 6px rgba(192,57,43,0.2); }
+  .tl-entry[data-project="acidic"].left .tl-card { border-right-color: #c0392b; }
+  .tl-entry[data-project="acidic"] .tl-year { color: #c0392b; background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.2); }
+  .tl-entry[data-project="acidic"] .tl-tag { color: #c0392b; background: rgba(192,57,43,0.07); border-color: rgba(192,57,43,0.18); }
+  .tl-entry[data-project="acidic"] .tl-link { color: #c0392b; }
  
   /* === RESPONSIVE: stack on mobile (handled at 768px above) === */
 
@@ -1494,6 +1510,56 @@ footer {
                         <a class="tl-link" href="https://cornersvillecc.com" target="_blank" onclick="event.stopPropagation()">cornersvillecc.com</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- 6. A Quiet Midnight — RIGHT -->
+            <div class="tl-entry right" data-project="aqm" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2024</span>
+                        <div class="tl-title">A Quiet Midnight</div>
+                        <p class="tl-desc">A late-night ambient piece built around piano-bell layers and slow-moving pads. My first finished produced track.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Ambient</span>
+                            <span class="tl-tag">Instrumental</span>
+                            <span class="tl-tag">Piano</span>
+                            <span class="tl-tag">Production</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Written during a period of peace — just me, my overheating iPad, and a vision (ish). Proof that ambient music is deceptively hard to make feel right.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/a-quiet-midnight" target="_blank" onclick="event.stopPropagation()">soundcloud.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Acidic Memories — LEFT -->
+            <div class="tl-entry left" data-project="acidic" onclick="toggleTimeline(this)">
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2025</span>
+                        <div class="tl-title">Acidic Memories</div>
+                        <p class="tl-desc">A bass-heavy, distorted experiment with unique percussion and a powerhouse of strings and winds.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Hard Rock</span>
+                            <span class="tl-tag">Experimental</span>
+                            <span class="tl-tag">Bass</span>
+                            <span class="tl-tag">Production</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>A more textured, edgier direction than anything prior — deliberately layered and heavy, blending hard rock energy with experimental production that pushed what I knew about arrangement.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://soundcloud.com/willy-lygon/stuck-in-my-lucid-mind" target="_blank" onclick="event.stopPropagation()">soundcloud.com</a>
+                    </div>
+                </div>
+                <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+                <div class="tl-empty"></div>
             </div>
 
         </div><!-- /.timeline-entries -->
