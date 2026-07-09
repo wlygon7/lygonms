@@ -625,6 +625,10 @@
             border-left-color: #e07b39;
         }
 
+        .tl-entry[data-project="lava"].left .tl-card {
+            border-right-color: #e07b39;
+        }
+
         .tl-entry[data-project="lava"] .tl-year {
             color: #e07b39;
             background: rgba(224, 123, 57, 0.08);
@@ -653,6 +657,10 @@
 
         .tl-entry[data-project="weather"].left .tl-card {
             border-right-color: #00b4e6;
+        }
+
+        .tl-entry[data-project="weather"].right .tl-card {
+            border-left-color: #00b4e6;
         }
 
         .tl-entry[data-project="weather"] .tl-year {
@@ -685,6 +693,10 @@
             border-right-color: #7c6ad6;
         }
 
+        .tl-entry[data-project="mc"].right .tl-card {
+            border-left-color: #7c6ad6;
+        }
+
         .tl-entry[data-project="mc"] .tl-year {
             color: #7c6ad6;
             background: rgba(124, 106, 214, 0.08);
@@ -702,33 +714,37 @@
         }
 
         .tl-entry[data-project="wdw"] .tl-dot-inner {
-            border-color: #2ecc71;
+            border-color: #b8860b;
         }
 
         .tl-entry[data-project="wdw"]:hover .tl-dot-inner,
         .tl-entry[data-project="wdw"].active .tl-dot-inner {
-            background: #2ecc71;
-            box-shadow: 0 0 0 6px rgba(46, 204, 113, 0.2);
+            background: #b8860b;
+            box-shadow: 0 0 0 6px rgba(184, 134, 11, 0.2);
         }
 
         .tl-entry[data-project="wdw"].left .tl-card {
-            border-right-color: #2ecc71;
+            border-right-color: #b8860b;
+        }
+
+        .tl-entry[data-project="wdw"].right .tl-card {
+            border-left-color: #b8860b;
         }
 
         .tl-entry[data-project="wdw"] .tl-year {
-            color: #2ecc71;
-            background: rgba(46, 204, 113, 0.08);
-            border-color: rgba(46, 204, 113, 0.2);
+            color: #b8860b;
+            background: rgba(184, 134, 11, 0.08);
+            border-color: rgba(184, 134, 11, 0.2);
         }
 
         .tl-entry[data-project="wdw"] .tl-tag {
-            color: #2ecc71;
-            background: rgba(46, 204, 113, 0.07);
-            border-color: rgba(46, 204, 113, 0.18);
+            color: #b8860b;
+            background: rgba(184, 134, 11, 0.07);
+            border-color: rgba(184, 134, 11, 0.18);
         }
 
         .tl-entry[data-project="wdw"] .tl-link {
-            color: #2ecc71;
+            color: #b8860b;
         }
 
         .tl-entry[data-project="church"] .tl-dot-inner {
@@ -739,6 +755,10 @@
         .tl-entry[data-project="church"].active .tl-dot-inner {
             background: #64433d;
             box-shadow: 0 0 0 6px rgba(100, 67, 61, 0.2);
+        }
+
+        .tl-entry[data-project="church"].left .tl-card {
+            border-right-color: #64433d;
         }
 
         .tl-entry[data-project="church"].right .tl-card {
@@ -775,6 +795,10 @@
             border-right-color: #7aa8c7;
         }
 
+        .tl-entry[data-project="aqm"].right .tl-card {
+            border-left-color: #7aa8c7;
+        }
+
         .tl-entry[data-project="aqm"] .tl-year {
             color: #7aa8c7;
             background: rgba(122, 168, 199, 0.08);
@@ -803,6 +827,10 @@
 
         .tl-entry[data-project="acidic"].right .tl-card {
             border-left-color: #c0392b;
+        }
+
+        .tl-entry[data-project="acidic"].left .tl-card {
+            border-right-color: #c0392b;
         }
 
         .tl-entry[data-project="acidic"] .tl-year {
@@ -1140,7 +1168,7 @@
             }
 
             .tl-entry[data-project="wdw"] .tl-card {
-                border-left-color: #2ecc71;
+                border-left-color: #b8860b;
             }
 
             .tl-entry[data-project="church"] .tl-card {
@@ -1931,42 +1959,10 @@
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 4. Willy's Laundry Rentals — RIGHT -->
-            <div class="tl-entry right" data-project="business" onclick="toggleTimeline(this)">
-                <div class="tl-empty"></div>
-                <div class="tl-dot">
-                    <div class="tl-dot-inner"></div>
-                </div>
-                <div class="tl-content">
-                    <div class="tl-card">
-                        <span class="tl-year">2026</span>
-                        <div class="tl-title">Willy's Laundry Rentals LLC</div>
-                        <p class="tl-desc">Founded and launched a laundry equipment rental business in Mississippi.
-                            LLC
-                            formation, website, Facebook presence, and ongoing operations — all before graduating
-                            high
-                            school.</p>
-                        <div class="tl-tags">
-                            <span class="tl-tag">LLC</span>
-                            <span class="tl-tag">Operations</span>
-                            <span class="tl-tag">Mississippi</span>
-                            <span class="tl-tag">Self-Founded</span>
-                        </div>
-                        <div class="tl-expand">
-                            <div class="tl-expand-inner">
-                                <p>Starting a real business as a high schooler meant learning operations, customer
-                                    relationships, and financial systems faster than any class could teach me. No
-                                    templates, no training wheels — just figure it out. Still running.</p>
-                            </div>
-                        </div>
-                        <a class="tl-link" href="https://willyslaundry.com" target="_blank"
-                            onclick="event.stopPropagation()">willyslaundry.com</a>
-                    </div>
-                </div>
-            </div>
+
 
             <!-- 5. Weather Dashboard — LEFT -->
-            <div class="tl-entry left" data-project="weather" onclick="toggleTimeline(this)">
+            <div class="tl-entry right" data-project="weather" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2025</span>
@@ -1999,7 +1995,7 @@
             </div>
 
             <!-- 6. Acidic Memories — RIGHT -->
-            <div class="tl-entry right" data-project="acidic" onclick="toggleTimeline(this)">
+            <div class="tl-entry left" data-project="acidic" onclick="toggleTimeline(this)">
                 <div class="tl-empty"></div>
                 <div class="tl-dot">
                     <div class="tl-dot-inner"></div>
@@ -2031,7 +2027,7 @@
             </div>
 
             <!-- 7. MonitorCraft — LEFT -->
-            <div class="tl-entry left" data-project="mc" onclick="toggleTimeline(this)">
+            <div class="tl-entry right" data-project="mc" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2025</span>
@@ -2066,40 +2062,7 @@
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 8. OTB Chess — RIGHT -->
-            <div class="tl-entry right" data-project="chess" onclick="toggleTimeline(this)">
-                <div class="tl-empty"></div>
-                <div class="tl-dot">
-                    <div class="tl-dot-inner"></div>
-                </div>
-                <div class="tl-content">
-                    <div class="tl-card">
-                        <span class="tl-year">2026–</span>
-                        <div class="tl-title">OTB Chess — Mulligan Club</div>
-                        <p class="tl-desc">Joined the Mulligan Chess Club in Tupelo, MS and entered rated
-                            over-the-board
-                            play. Pursuing USCF and FIDE ratings with a long-term goal of FIDE Master.</p>
-                        <div class="tl-tags">
-                            <span class="tl-tag">OTB Chess</span>
-                            <span class="tl-tag">USCF</span>
-                            <span class="tl-tag">Caro-Kann</span>
-                            <span class="tl-tag">Scotch Four Knights</span>
-                        </div>
-                        <div class="tl-expand">
-                            <div class="tl-expand-inner">
-                                <p>Chess is the one domain where being wrong costs you immediately and publicly.
-                                    Studying openings, playing rated games, and building a long-term plan toward FM
-                                    —
-                                    it's the most honest feedback loop I've found in any discipline.</p>
-                            </div>
-                        </div>
-                        <a class="tl-link" href="https://www.chess.com/member/wlygon7" target="_blank"
-                            onclick="event.stopPropagation()">chess.com/wlygon7</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 9. WDW Wait Times — LEFT -->
+            <!-- 9. WDW Wait Times — RIGHT -->
             <div class="tl-entry left" data-project="wdw" onclick="toggleTimeline(this)">
                 <div class="tl-content">
                     <div class="tl-card">
@@ -2137,7 +2100,74 @@
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 10. Cornersville Community Church — RIGHT -->
+            <!-- 4. Willy's Laundry Rentals — left -->
+            <div class="tl-entry right" data-project="business" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2026</span>
+                        <div class="tl-title">Willy's Laundry Rentals LLC</div>
+                        <p class="tl-desc">Founded and launched a laundry equipment rental business in Mississippi.
+                            LLC
+                            formation, website, Facebook presence, and ongoing operations — all before graduating
+                            high
+                            school.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">LLC</span>
+                            <span class="tl-tag">Operations</span>
+                            <span class="tl-tag">Mississippi</span>
+                            <span class="tl-tag">Self-Founded</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Starting a real business as a high schooler meant learning operations, customer
+                                    relationships, and financial systems faster than any class could teach me. No
+                                    templates, no training wheels — just figure it out. Still running.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://willyslaundry.com" target="_blank"
+                            onclick="event.stopPropagation()">willyslaundry.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. OTB Chess — right -->
+            <div class="tl-entry left" data-project="chess" onclick="toggleTimeline(this)">
+                <div class="tl-empty"></div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2026–</span>
+                        <div class="tl-title">OTB Chess — Mulligan Club</div>
+                        <p class="tl-desc">Joined the Mulligan Chess Club in Tupelo, MS and entered rated
+                            over-the-board
+                            play. Pursuing USCF and FIDE ratings with a long-term goal of FIDE Master.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">OTB Chess</span>
+                            <span class="tl-tag">USCF</span>
+                            <span class="tl-tag">Caro-Kann</span>
+                            <span class="tl-tag">Scotch Four Knights</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>Chess is the one domain where being wrong costs you immediately and publicly.
+                                    Studying openings, playing rated games, and building a long-term plan toward FM
+                                    —
+                                    it's the most honest feedback loop I've found in any discipline.</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://www.chess.com/member/wlygon7" target="_blank"
+                            onclick="event.stopPropagation()">chess.com/wlygon7</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Cornersville Community Church — left -->
             <div class="tl-entry right" data-project="church" onclick="toggleTimeline(this)">
                 <div class="tl-empty"></div>
                 <div class="tl-dot">
