@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Homelab | Wilson Ligon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .homelab-hero {
+            text-align: center;
+            padding: 50px 40px 30px;
+        }
+
+        .homelab-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .homelab-hero p {
+            font-size: 17px;
+            color: var(--text-gray);
+            max-width: 560px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: var(--accent);
+            border: 2px solid var(--accent) !important;
+            padding: 8px 22px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .stack-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 6px;
+        }
+
+        .stack-tag {
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 4px 11px;
+            border-radius: 999px;
+            background: rgba(74, 124, 158, 0.08);
+            border: 1px solid rgba(74, 124, 158, 0.2);
+            color: var(--accent);
+        }
+
+        /* === STATUS BOARD (dark) === */
+        .status-board {
+            background: #14181f;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .status-board-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .status-board-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e8e8e8;
+        }
+
+        .status-refresh {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #14181f;
+            background: var(--accent-light);
+            border: none;
+            border-radius: 999px;
+            padding: 8px 18px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .status-refresh:hover {
+            background: #8db8d9;
+        }
+
+        .node-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .node-card {
+            background: #1c222b;
+            border: 1px solid #2a313c;
+            border-radius: 8px;
+            padding: 14px 18px;
+            cursor: pointer;
+        }
+
+        .node-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: #555;
+        }
+
+        .status-dot.checking {
+            background: #d4a94e;
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+
+        .status-dot.up {
+            background: #3bc06a;
+        }
+
+        .status-dot.down {
+            background: #d4534e;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        .node-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: #e8e8e8;
+            flex: 1;
+        }
+
+        .node-status-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11.5px;
+            color: #8a8f98;
+            text-transform: lowercase;
+        }
+
+        .node-detail {
+            display: none;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #2a313c;
+        }
+
+        .node-card.open .node-detail {
+            display: block;
+        }
+
+        .node-title {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: #e8e8e8;
+            margin-bottom: 4px;
+        }
+
+        .node-desc {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #9aa0aa;
+            margin-bottom: 8px;
+        }
+
+        .node-link {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .node-link:hover {
+            text-decoration: underline;
+        }
+
+        .status-caveat {
+            font-size: 12px;
+            color: #6b7078;
+            margin-top: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="container homelab-hero">
+        <h1>The Homelab</h1>
+        <p>A couple of Proxmox boxes, some Docker, and everything that's ended up running on top.</p>
+        <div class="stack-row">
+            <span class="stack-tag">Proxmox</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">Cloudflare</span>
+            <span class="stack-tag">DNS</span>
+            <span class="stack-tag">Git</span>
+            <span class="stack-tag">Neovim</span>
+            <span class="stack-tag">Linux</span>
+        </div>
+        <div style="margin-top:24px;">
+            <a class="back-link" href="index.html">← Back Home</a>
+        </div>
+    </div>
+
+    <!-- Status Board -->
+    <div class="container status-board">
+        <div class="status-board-head">
+            <span class="status-board-title">What's Actually Up</span>
+            <button class="status-refresh" onclick="checkAllNodes()">Check Again</button>
+        </div>
+
+        <div class="node-list" id="nodeList"></div>
+
+        <p class="status-caveat">This pings each URL from your browser. A "no response" doesn't always mean it's down — could be your adblocker, could be CORS, could actually be down.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 JWL. Built with passion and love.</p>
+            <p class="footer-text">Contact: <a href="mailto:wlygon@lygonms.com">wlygon@lygonms.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const nodes = [
+            { url: 'https://lava.lygonms.com', name: 'lava.lygonms.com', title: 'Blob Physics', desc: 'CSS/JS lava lamp. Live color picker, bubble burst mode. 2024.' },
+            { url: 'https://weather.lygonms.com', name: 'weather.lygonms.com', title: 'Weather Dashboard', desc: 'Live weather, dark UI, glowing cyan accents. 2025.' },
+            { url: 'https://mc.lygonms.com', name: 'mc.lygonms.com', title: 'MonitorCraft', desc: 'Minecraft server uptime monitor. React, Vite, Firebase auth. 2025.' },
+            { url: 'https://wdwtimes.lygonms.com', name: 'wdwtimes.lygonms.com', title: 'WDW Wait Times', desc: 'Walt Disney World wait times as a stock ticker. 2025-2026.' },
+            { url: 'https://cornersvillecc.com', name: 'cornersvillecc.com', title: 'Cornersville Community Church', desc: 'DNS, hosting, Google Workspace, Givelify. Built with Lauren Tenhet. 2026.' },
+            { url: 'https://cloakink.org', name: 'cloakink.org', title: 'CloakInk Technologies LLC', desc: 'Hand-coded front-end dev, no templates. 2026.' },
+            { url: 'https://willyslaundry.com', name: 'willyslaundry.com', title: "Willy's Laundry Rentals LLC", desc: 'Laundry equipment rental LLC. 2026.' }
+        ];
+
+        function buildNodeList() {
+            const list = document.getElementById('nodeList');
+            list.innerHTML = nodes.map((n, i) => `
+                <div class="node-card" id="node-${i}" onclick="toggleNode(${i})">
+                    <div class="node-row">
+                        <span class="status-dot" id="dot-${i}"></span>
+                        <span class="node-name">${n.name}</span>
+                        <span class="node-status-text" id="text-${i}">idle</span>
+                    </div>
+                    <div class="node-detail">
+                        <div class="node-title">${n.title}</div>
+                        <div class="node-desc">${n.desc}</div>
+                        <a class="node-link" href="${n.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${n.url} ↗</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleNode(i) {
+            document.getElementById('node-' + i).classList.toggle('open');
+        }
+
+        async function pingNode(i) {
+            const dot = document.getElementById('dot-' + i);
+            const text = document.getElementById('text-' + i);
+            dot.className = 'status-dot checking';
+            text.textContent = 'checking';
+
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 6000);
+
+            try {
+                await fetch(nodes[i].url, { mode: 'no-cors', cache: 'no-store', signal: ctrl.signal });
+                clearTimeout(timer);
+                dot.className = 'status-dot up';
+                text.textContent = 'reachable';
+            } catch (e) {
+                clearTimeout(timer);
+                dot.className = 'status-dot down';
+                text.textContent = e.name === 'AbortError' ? 'timed out' : 'no response';
+            }
+        }
+
+        function checkAllNodes() {
+            nodes.forEach((n, i) => pingNode(i));
+        }
+
+        buildNodeList();
+        checkAllNodes();
+    </script>
+
+</body>
+</html>

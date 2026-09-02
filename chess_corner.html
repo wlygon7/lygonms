@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Corner | Wilson Ligon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .chess-hero {
+            text-align: center;
+            padding: 50px 40px 30px;
+        }
+
+        .chess-hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .chess-hero p {
+            font-size: 17px;
+            color: var(--text-gray);
+            max-width: 560px;
+            margin: 0 auto 20px;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: var(--accent);
+            border: 2px solid var(--accent) !important;
+            padding: 8px 22px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .profile-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 6px;
+        }
+
+        .profile-tag {
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 4px 11px;
+            border-radius: 999px;
+            background: rgba(142, 68, 173, 0.08);
+            border: 1px solid rgba(142, 68, 173, 0.2);
+            color: #8e44ad;
+        }
+
+        .section-label {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .section-sub {
+            text-align: center;
+            font-size: 13.5px;
+            color: var(--text-gray);
+            margin-bottom: 22px;
+        }
+
+        /* === OPENING TABS === */
+        .opening-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+
+        .opening-tab {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--accent);
+            background: transparent;
+            border: 1.5px solid var(--accent);
+            border-radius: 999px;
+            padding: 8px 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .opening-tab.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .opening-layout {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .opening-board-col {
+            flex: 0 0 auto;
+        }
+
+        .opening-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 320px;
+            max-width: 80vw;
+            border: 3px solid var(--text-dark);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .opening-sq {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(1.2rem, 5vw, 1.7rem);
+            user-select: none;
+        }
+
+        .opening-sq.light {
+            background: #f0ede2;
+        }
+
+        .opening-sq.dark {
+            background: #b9c9d6;
+        }
+
+        .white-pc {
+            color: #fff;
+            text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+        }
+
+        .black-pc {
+            color: #1a1a1a;
+        }
+
+        .opening-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .op-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: white;
+            background: var(--accent);
+            border: none;
+            border-radius: 999px;
+            padding: 9px 18px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .op-btn:hover {
+            background: var(--accent-light);
+        }
+
+        .op-btn:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+
+        .opening-info-col {
+            flex: 1 1 260px;
+            min-width: 240px;
+            max-width: 340px;
+        }
+
+        .opening-move-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--accent);
+            background: rgba(74, 124, 158, 0.08);
+            border: 1px solid rgba(74, 124, 158, 0.2);
+            border-radius: 6px;
+            padding: 6px 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .opening-note {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
+        .opening-progress {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11.5px;
+            color: var(--text-gray);
+            margin-top: 14px;
+        }
+
+        /* === MATCH CLOCK === */
+        .clock-board {
+            background: #14181f;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .clock-title {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e8e8e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .clock-faces {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .clock-face {
+            flex: 1 1 160px;
+            max-width: 220px;
+            background: #1c222b;
+            border: 2px solid #2a313c;
+            border-radius: 10px;
+            padding: 22px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+        }
+
+        .clock-face.turn {
+            border-color: var(--accent-light);
+        }
+
+        .clock-face.flagged {
+            border-color: #d4534e;
+        }
+
+        .clock-side-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: #8a8f98;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .clock-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.4rem;
+            color: #e8e8e8;
+        }
+
+        .clock-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .clock-presets {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .clock-preset {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #9aa0aa;
+            background: transparent;
+            border: 1px solid #2a313c;
+            border-radius: 999px;
+            padding: 5px 14px;
+            cursor: pointer;
+        }
+
+        .clock-preset.active {
+            border-color: var(--accent-light);
+            color: var(--accent-light);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="container chess-hero">
+        <h1>Chess Corner</h1>
+        <p>300+ on chess.com, USCF and FIDE next.</p>
+        <div class="profile-row">
+            <span class="profile-tag">Mulligan Chess Club, Tupelo MS</span>
+            <span class="profile-tag">Caro-Kann (Black)</span>
+            <span class="profile-tag">Scotch Four Knights (White)</span>
+            <span class="profile-tag">Goal: FIDE Master</span>
+        </div>
+        <div style="margin-top:24px;">
+            <a class="back-link" href="index.html">← Back Home</a>
+            <a class="back-link" href="https://www.chess.com/member/wlygon7" target="_blank" rel="noopener" style="margin-left:10px;">chess.com/wlygon7 ↗</a>
+        </div>
+    </div>
+
+    <!-- Opening Explorer -->
+    <div class="container">
+        <div class="section-label">Repertoire</div>
+        <p class="section-sub">What I'm actually playing right now, move by move.</p>
+
+        <div class="opening-tabs">
+            <button class="opening-tab active" id="tab-caro" onclick="switchOpening('caro')">Caro-Kann · Black</button>
+            <button class="opening-tab" id="tab-scotch" onclick="switchOpening('scotch')">Scotch Four Knights · White</button>
+        </div>
+
+        <div class="opening-layout">
+            <div class="opening-board-col">
+                <div class="opening-board" id="openingBoard"></div>
+                <div class="opening-nav">
+                    <button class="op-btn" id="opPrev" onclick="opStep(-1)">← Prev</button>
+                    <button class="op-btn" id="opNext" onclick="opStep(1)">Next →</button>
+                </div>
+            </div>
+            <div class="opening-info-col">
+                <div class="opening-move-label" id="opMoveLabel">Starting position</div>
+                <p class="opening-note" id="opNote">Standard start.</p>
+                <p class="opening-progress" id="opProgress">move 0 / 0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Match Clock -->
+    <div class="container clock-board">
+        <div class="clock-title">Match Clock</div>
+        <div class="clock-faces">
+            <div class="clock-face turn" id="clockFace0" onclick="clockPress(0)">
+                <div class="clock-side-label">White</div>
+                <div class="clock-time" id="clockTime0">5:00</div>
+            </div>
+            <div class="clock-face" id="clockFace1" onclick="clockPress(1)">
+                <div class="clock-side-label">Black</div>
+                <div class="clock-time" id="clockTime1">5:00</div>
+            </div>
+        </div>
+        <div class="clock-presets">
+            <button class="clock-preset" onclick="clockPreset(1)">Bullet · 1 min</button>
+            <button class="clock-preset active" onclick="clockPreset(5)">Blitz · 5 min</button>
+            <button class="clock-preset" onclick="clockPreset(15)">Rapid · 15 min</button>
+        </div>
+        <div class="clock-controls">
+            <button class="op-btn" onclick="clockStart()">Start</button>
+            <button class="op-btn" onclick="clockPause()">Pause</button>
+            <button class="op-btn" onclick="clockReset()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 JWL. Built with passion and love.</p>
+            <p class="footer-text">Contact: <a href="mailto:wlygon@lygonms.com">wlygon@lygonms.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        /* ===== OPENING DATA ===== */
+        const glyphMap = { K: '♔', Q: '♕', R: '♖', B: '♗', N: '♘', P: '♙', k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟' };
+
+        const openings = {
+            caro: {
+                label: 'Caro-Kann · Black',
+                plies: [
+                    { rows: ["rnbqkbnr", "pppppppp", "........", "........", "........", "........", "PPPPPPPP", "RNBQKBNR"], move: "Starting position", note: "Standard start." },
+                    { rows: ["rnbqkbnr", "pppppppp", "........", "........", "....P...", "........", "PPPP.PPP", "RNBQKBNR"], move: "1. e4", note: "White stakes a claim in the center and opens lines for the bishop and queen." },
+                    { rows: ["rnbqkbnr", "pp.ppppp", "..p.....", "........", "....P...", "........", "PPPP.PPP", "RNBQKBNR"], move: "1... c6", note: "The Caro-Kann. Prepares ...d5 without shutting in the c8-bishop." },
+                    { rows: ["rnbqkbnr", "pp.ppppp", "..p.....", "........", "...PP...", "........", "PPP..PPP", "RNBQKBNR"], move: "2. d4", note: "White grabs a second central pawn." },
+                    { rows: ["rnbqkbnr", "pp..pppp", "..p.....", "...p....", "...PP...", "........", "PPP..PPP", "RNBQKBNR"], move: "2... d5", note: "Black strikes back in the center right away." },
+                    { rows: ["rnbqkbnr", "pp..pppp", "..p.....", "...p....", "...PP...", "..N.....", "PPP..PPP", "R.BQKBNR"], move: "3. Nc3", note: "White develops and adds pressure on d5." },
+                    { rows: ["rnbqkbnr", "pp..pppp", "..p.....", "........", "...Pp...", "..N.....", "PPP..PPP", "R.BQKBNR"], move: "3... dxe4", note: "Black trades off the center pawn instead of holding it." },
+                    { rows: ["rnbqkbnr", "pp..pppp", "..p.....", "........", "...PN...", "........", "PPP..PPP", "R.BQKBNR"], move: "4. Nxe4", note: "White recaptures. This knight is about to get kicked." },
+                    { rows: ["rn.qkbnr", "pp..pppp", "..p.....", ".....b..", "...PN...", "........", "PPP..PPP", "R.BQKBNR"], move: "4... Bf5", note: "The point of the whole line — this bishop gets out before ...e6 locks it in." },
+                    { rows: ["rn.qkbnr", "pp..pppp", "..p.....", ".....b..", "...P....", "......N.", "PPP..PPP", "R.BQKBNR"], move: "5. Ng3", note: "The knight sidesteps and hits the bishop." },
+                    { rows: ["rn.qkbnr", "pp..pppp", "..p...b.", "........", "...P....", "......N.", "PPP..PPP", "R.BQKBNR"], move: "5... Bg6", note: "Bishop retreats, still outside the pawn chain." },
+                    { rows: ["rn.qkbnr", "pp..pppp", "..p...b.", "........", "...P...P", "......N.", "PPP..PP.", "R.BQKBNR"], move: "6. h4", note: "Gains space and threatens h5, pushing the bishop back further." },
+                    { rows: ["rn.qkbnr", "pp..ppp.", "..p...bp", "........", "...P...P", "......N.", "PPP..PP.", "R.BQKBNR"], move: "6... h6", note: "Stops h5 cold." },
+                    { rows: ["rn.qkbnr", "pp..ppp.", "..p...bp", "........", "...P...P", ".....NN.", "PPP..PP.", "R.BQKB.R"], move: "7. Nf3", note: "Develops the last minor piece, eyes e5." },
+                    { rows: ["r..qkbnr", "pp.nppp.", "..p...bp", "........", "...P...P", ".....NN.", "PPP..PP.", "R.BQKB.R"], move: "7... Nd7", note: "Develops toward ...Ngf6, keeps things solid." }
+                ]
+            },
+            scotch: {
+                label: 'Scotch Four Knights · White',
+                plies: [
+                    { rows: ["rnbqkbnr", "pppppppp", "........", "........", "........", "........", "PPPPPPPP", "RNBQKBNR"], move: "Starting position", note: "Standard start." },
+                    { rows: ["rnbqkbnr", "pppppppp", "........", "........", "....P...", "........", "PPPP.PPP", "RNBQKBNR"], move: "1. e4", note: "Open game." },
+                    { rows: ["rnbqkbnr", "pppp.ppp", "........", "....p...", "....P...", "........", "PPPP.PPP", "RNBQKBNR"], move: "1... e5", note: "Black meets it symmetrically." },
+                    { rows: ["rnbqkbnr", "pppp.ppp", "........", "....p...", "....P...", ".....N..", "PPPP.PPP", "RNBQKB.R"], move: "2. Nf3", note: "Standard developing move, hits e5." },
+                    { rows: ["r.bqkbnr", "pppp.ppp", "..n.....", "....p...", "....P...", ".....N..", "PPPP.PPP", "RNBQKB.R"], move: "2... Nc6", note: "Defends the pawn, develops." },
+                    { rows: ["r.bqkbnr", "pppp.ppp", "..n.....", "....p...", "....P...", "..N..N..", "PPPP.PPP", "R.BQKB.R"], move: "3. Nc3", note: "Four Knights — both sides bring out both knights first." },
+                    { rows: ["r.bqkb.r", "pppp.ppp", "..n..n..", "....p...", "....P...", "..N..N..", "PPPP.PPP", "R.BQKB.R"], move: "3... Nf6", note: "Symmetry continues. Black eyes e4." },
+                    { rows: ["r.bqkb.r", "pppp.ppp", "..n..n..", "........", "...PP...", "..N..N..", "PPP..PPP", "R.BQKB.R"], move: "4. d4", note: "White breaks symmetry first. This is the Scotch Four Knights." },
+                    { rows: ["r.bqkb.r", "pppp.ppp", "..n..n..", "........", "...pP...", "..N..N..", "PPP..PPP", "R.BQKB.R"], move: "4... exd4", note: "More or less forced — otherwise White's center just grows." },
+                    { rows: ["r.bqkb.r", "pppp.ppp", "..n..n..", "........", "...NP...", "..N.....", "PPP..PPP", "R.BQKB.R"], move: "5. Nxd4", note: "Recaptures, centralizes the knight." },
+                    { rows: ["r.bqk..r", "pppp.ppp", "..n..n..", "........", ".b.NP...", "..N.....", "PPP..PPP", "R.BQKB.R"], move: "5... Bb4", note: "Pins the c3-knight — the main try here." },
+                    { rows: ["r.bqk..r", "pppp.ppp", "..N..n..", "........", ".b..P...", "..N.....", "PPP..PPP", "R.BQKB.R"], move: "6. Nxc6", note: "Trades off the attacked knight instead of dealing with the pin." },
+                    { rows: ["r.bqk..r", "p.pp.ppp", "..p..n..", "........", ".b..P...", "..N.....", "PPP..PPP", "R.BQKB.R"], move: "6... bxc6", note: "Recaptures — doubled pawns, but the open b-file and center." },
+                    { rows: ["r.bqk..r", "p.pp.ppp", "..p..n..", "........", ".b..P...", "..NB....", "PPP..PPP", "R.BQK..R"], move: "7. Bd3", note: "Develops and prepares to castle." }
+                ]
+            }
+        };
+
+        let currentOpening = 'caro';
+        let opIndex = 0;
+
+        function renderOpeningBoard(rows) {
+            let html = '';
+            for (let r = 0; r < 8; r++) {
+                for (let c = 0; c < 8; c++) {
+                    const ch = rows[r][c];
+                    const light = (r + c) % 2 === 0;
+                    const glyph = ch !== '.' ? glyphMap[ch] : '';
+                    const pieceClass = ch !== '.' ? (ch === ch.toUpperCase() ? 'white-pc' : 'black-pc') : '';
+                    html += `<div class="opening-sq ${light ? 'light' : 'dark'}"><span class="${pieceClass}">${glyph}</span></div>`;
+                }
+            }
+            document.getElementById('openingBoard').innerHTML = html;
+        }
+
+        function renderOpeningStep() {
+            const data = openings[currentOpening];
+            const ply = data.plies[opIndex];
+            renderOpeningBoard(ply.rows);
+            document.getElementById('opMoveLabel').textContent = ply.move;
+            document.getElementById('opNote').textContent = ply.note;
+            document.getElementById('opProgress').textContent = `move ${opIndex} / ${data.plies.length - 1}`;
+            document.getElementById('opPrev').disabled = opIndex === 0;
+            document.getElementById('opNext').disabled = opIndex === data.plies.length - 1;
+        }
+
+        function opStep(dir) {
+            const data = openings[currentOpening];
+            opIndex = Math.max(0, Math.min(data.plies.length - 1, opIndex + dir));
+            renderOpeningStep();
+        }
+
+        function switchOpening(name) {
+            currentOpening = name;
+            opIndex = 0;
+            document.getElementById('tab-caro').classList.toggle('active', name === 'caro');
+            document.getElementById('tab-scotch').classList.toggle('active', name === 'scotch');
+            renderOpeningStep();
+        }
+
+        renderOpeningStep();
+
+        /* ===== MATCH CLOCK ===== */
+        let clockSeconds = [300, 300];
+        let clockActive = null;
+        let clockRunning = false;
+        let clockTimer = null;
+        let clockPresetMinutes = 5;
+
+        function fmtClock(s) {
+            const m = Math.floor(s / 60);
+            const sec = s % 60;
+            return m + ':' + String(sec).padStart(2, '0');
+        }
+
+        function renderClock() {
+            document.getElementById('clockTime0').textContent = fmtClock(clockSeconds[0]);
+            document.getElementById('clockTime1').textContent = fmtClock(clockSeconds[1]);
+            document.getElementById('clockFace0').classList.toggle('turn', clockActive === 0);
+            document.getElementById('clockFace1').classList.toggle('turn', clockActive === 1);
+            document.getElementById('clockFace0').classList.toggle('flagged', clockSeconds[0] === 0);
+            document.getElementById('clockFace1').classList.toggle('flagged', clockSeconds[1] === 0);
+        }
+
+        function clockTick() {
+            if (clockActive === null) return;
+            clockSeconds[clockActive] = Math.max(0, clockSeconds[clockActive] - 1);
+            if (clockSeconds[clockActive] === 0) {
+                clockPause();
+            }
+            renderClock();
+        }
+
+        function clockPress(side) {
+            if (!clockRunning) return;
+            if (clockActive === side) {
+                clockActive = side === 0 ? 1 : 0;
+                renderClock();
+            }
+        }
+
+        function clockStart() {
+            if (clockRunning) return;
+            if (clockActive === null) clockActive = 0;
+            clockRunning = true;
+            clockTimer = setInterval(clockTick, 1000);
+            renderClock();
+        }
+
+        function clockPause() {
+            clockRunning = false;
+            clearInterval(clockTimer);
+            renderClock();
+        }
+
+        function clockReset() {
+            clockPause();
+            clockSeconds = [clockPresetMinutes * 60, clockPresetMinutes * 60];
+            clockActive = null;
+            renderClock();
+        }
+
+        function clockPreset(minutes) {
+            clockPresetMinutes = minutes;
+            document.querySelectorAll('.clock-preset').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            clockReset();
+        }
+
+        renderClock();
+    </script>
+
+</body>
+</html>
