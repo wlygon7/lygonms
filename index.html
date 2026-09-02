@@ -849,6 +849,40 @@
             color: #c0392b;
         }
 
+        .tl-entry[data-project="navicraft"] .tl-dot-inner {
+            border-color: #1F7A82;
+        }
+
+        .tl-entry[data-project="navicraft"]:hover .tl-dot-inner,
+        .tl-entry[data-project="navicraft"].active .tl-dot-inner {
+            background: #1F7A82;
+            box-shadow: 0 0 0 6px rgba(31, 122, 130, 0.2);
+        }
+
+        .tl-entry[data-project="navicraft"].left .tl-card {
+            border-right-color: #1F7A82;
+        }
+
+        .tl-entry[data-project="navicraft"].right .tl-card {
+            border-left-color: #1F7A82;
+        }
+
+        .tl-entry[data-project="navicraft"] .tl-year {
+            color: #1F7A82;
+            background: rgba(31, 122, 130, 0.08);
+            border-color: rgba(31, 122, 130, 0.2);
+        }
+
+        .tl-entry[data-project="navicraft"] .tl-tag {
+            color: #1F7A82;
+            background: rgba(31, 122, 130, 0.07);
+            border-color: rgba(31, 122, 130, 0.18);
+        }
+
+        .tl-entry[data-project="navicraft"] .tl-link {
+            color: #1F7A82;
+        }
+
         /* === RESPONSIVE: stack on mobile (handled at 768px above) === */
 
 
@@ -1193,6 +1227,10 @@
 
             .tl-entry[data-project="business"] .tl-card {
                 border-left-color: #27ae60;
+            }
+
+            .tl-entry[data-project="navicraft"] .tl-card {
+                border-left-color: #1F7A82;
             }
 
             .tl-dot {
@@ -1847,7 +1885,6 @@
                 <a href="https://cloakink.org" target="_blank">Website</a> <br>
                 <a href="https://www.facebook.com/cloakink" target="_blank">Facebook</a> <br>
                 <div class="business-meta">
-                    <span class="business-tag">Mississippi</span>
                     <span class="business-tag">LLC</span>
                     <span class="business-tag">Active</span>
                 </div>
@@ -2018,7 +2055,7 @@
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
                                 <p>A more textured, edgier direction than anything prior — deliberately layered and
-                                    heavy, blending hard rock energy with experimental production that pushed what I
+                                    heavy, blending hard rock energy with experimental production that pushed what
                                     knew about arrangement.</p>
                             </div>
                         </div>
@@ -2102,7 +2139,7 @@
                 <div class="tl-empty"></div>
             </div>
 
-            <!-- 4. Willy's Laundry Rentals — left -->
+            <!-- 4. CloakInk — left -->
             <div class="tl-entry right" data-project="business" onclick="toggleTimeline(this)">
                 <div class="tl-empty"></div>
                 <div class="tl-dot">
@@ -2111,8 +2148,8 @@
                 <div class="tl-content">
                     <div class="tl-card">
                         <span class="tl-year">2026</span>
-                        <div class="tl-title">Willy's Laundry Rentals LLC</div>
-                        <p class="tl-desc">Founded and launched a laundry equipment rental business in Mississippi.
+                        <div class="tl-title">CloakInk Technologies LLC</div>
+                        <p class="tl-desc">Founded and launched a custom front-end development studio.
                             LLC
                             formation, website, Facebook presence, and ongoing operations — all before graduating
                             high
@@ -2120,18 +2157,17 @@
                         <div class="tl-tags">
                             <span class="tl-tag">LLC</span>
                             <span class="tl-tag">Operations</span>
-                            <span class="tl-tag">Mississippi</span>
                             <span class="tl-tag">Self-Founded</span>
                         </div>
                         <div class="tl-expand">
                             <div class="tl-expand-inner">
                                 <p>Starting a real business as a high schooler meant learning operations, customer
                                     relationships, and financial systems faster than any class could teach me. No
-                                    templates, no training wheels — just figure it out. Still running.</p>
+                                    templates, no training wheels; just figure it out.</p>
                             </div>
                         </div>
-                        <a class="tl-link" href="https://willyslaundry.com" target="_blank"
-                            onclick="event.stopPropagation()">willyslaundry.com</a>
+                        <a class="tl-link" href="https://cloakink.org" target="_blank"
+                            onclick="event.stopPropagation()">cloakink.org</a>
                     </div>
                 </div>
             </div>
@@ -2200,6 +2236,38 @@
                             onclick="event.stopPropagation()">cornersvillecc.com</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- 11. NaviCraft — left -->
+            <div class="tl-entry left" data-project="navicraft" onclick="toggleTimeline(this)">
+                <div class="tl-content">
+                    <div class="tl-card">
+                        <span class="tl-year">2026</span>
+                        <div class="tl-title">NaviCraft</div>
+                        <p class="tl-desc">A Fabric mod for Minecraft that draws a live trail of arrows to any
+                            destination, Forza Horizon-style, with saved waypoints, a HUD compass, and routing that
+                            knows to send you through a portal first if that's actually the way there.</p>
+                        <div class="tl-tags">
+                            <span class="tl-tag">Java</span>
+                            <span class="tl-tag">Fabric</span>
+                            <span class="tl-tag">Minecraft Modding</span>
+                            <span class="tl-tag">Custom Rendering</span>
+                        </div>
+                        <div class="tl-expand">
+                            <div class="tl-expand-inner">
+                                <p>My first real Minecraft mod, and my first project built mostly in Java, a language
+                                    I'm still learning. Wrote the design and every feature spec myself, tested it
+                                    in-game, and shipped it with the first iteration working (miraculously).</p>
+                            </div>
+                        </div>
+                        <a class="tl-link" href="https://navicraft.lygonms.com" target="_blank"
+                            onclick="event.stopPropagation()">navicraft.lygonms.com</a>
+                    </div>
+                </div>
+                <div class="tl-dot">
+                    <div class="tl-dot-inner"></div>
+                </div>
+                <div class="tl-empty"></div>
             </div>
 
         </div><!-- /.timeline-entries -->
